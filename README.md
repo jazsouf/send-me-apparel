@@ -29,3 +29,10 @@ Cap: 662
 - Product Listing Page (with all the available drawings)
 - Custom product page (item + drawing)
 - Cart page with selected products
+
+## NPM PAKAGES INSTALLED
+
+REACT-HOOK-FORM
+REACT-SKETCH-CANVAS
+REACT-ROUTER-DOM
+AXIOS
