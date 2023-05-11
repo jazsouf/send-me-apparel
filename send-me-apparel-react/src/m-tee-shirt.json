@@ -1,0 +1,1811 @@
+{
+    "code": 200,
+    "result": {
+        "product": {
+            "id": 440,
+            "main_category_id": 6,
+            "type": "T-SHIRT",
+            "description": "You can't go wrong with a classic and simple 100% cotton t-shirt. The men's staple tee is super comfy and soft to the touch. Combine it with a jacket for a smarter look, and you're ready to go. \n• 100% combed cotton\n• Heather colors are 85% cotton, 15% viscose\n• Mid-weight, 5.3oz/yd² (180 g/m²), 28-singles \n• Regular fit\n• Ribbed crew neck\n• Side seamed\n• Double-needle stitched hems\n• Shoulder-to-shoulder taping\n• Pre-shrunk for extra durability\n• Blank product sourced from Bangladesh\n\nImportant: This product is available in Australia and New Zealand only. If your shipping address is outside these regions, please choose a different product.",
+            "type_name": "T-Shirt",
+            "title": "Men's Staple T-Shirt | AS Colour 5001",
+            "brand": "AS Colour",
+            "model": "Staple 5001",
+            "image": "https://files.cdn.printful.com/o/upload/product-catalog-img/e9/e959aca1d21eb255605111ca78ade3ca_l",
+            "variant_count": 75,
+            "currency": "USD",
+            "options": [
+                {
+                    "id": "thread_colors_chest_left",
+                    "title": "Left chest thread colors",
+                    "type": "multi_select",
+                    "values": {
+                        "#FFFFFF": "1801 White",
+                        "#000000": "1800 Black",
+                        "#96A1A8": "1718 Grey",
+                        "#A67843": "1672 Old Gold",
+                        "#FFCC00": "1951 Gold",
+                        "#E25C27": "1987 Orange",
+                        "#CC3366": "1910 Flamingo",
+                        "#CC3333": "1839 Red",
+                        "#660000": "1784 Maroon",
+                        "#333366": "1966 Navy",
+                        "#005397": "1842 Royal",
+                        "#3399FF": "1695 Aqua/Teal",
+                        "#6B5294": "1832 Purple",
+                        "#01784E": "1751 Kelly Green",
+                        "#7BA35A": "1848 Kiwi Green"
+                    },
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                },
+                {
+                    "id": "thread_colors_chest_center",
+                    "title": "Center chest thread colors",
+                    "type": "multi_select",
+                    "values": {
+                        "#FFFFFF": "1801 White",
+                        "#000000": "1800 Black",
+                        "#96A1A8": "1718 Grey",
+                        "#A67843": "1672 Old Gold",
+                        "#FFCC00": "1951 Gold",
+                        "#E25C27": "1987 Orange",
+                        "#CC3366": "1910 Flamingo",
+                        "#CC3333": "1839 Red",
+                        "#660000": "1784 Maroon",
+                        "#333366": "1966 Navy",
+                        "#005397": "1842 Royal",
+                        "#3399FF": "1695 Aqua/Teal",
+                        "#6B5294": "1832 Purple",
+                        "#01784E": "1751 Kelly Green",
+                        "#7BA35A": "1848 Kiwi Green"
+                    },
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                },
+                {
+                    "id": "notes",
+                    "title": "Embroidery notes",
+                    "type": "text",
+                    "values": null,
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                },
+                {
+                    "id": "lifelike",
+                    "title": "Lifelike",
+                    "type": "bool",
+                    "values": null,
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                }
+            ],
+            "dimensions": null,
+            "is_discontinued": false,
+            "avg_fulfillment_time": null,
+            "techniques": [
+                {
+                    "key": "DTG",
+                    "display_name": "DTG printing",
+                    "is_default": true
+                },
+                {
+                    "key": "EMBROIDERY",
+                    "display_name": "Embroidery",
+                    "is_default": false
+                }
+            ],
+            "files": [
+                {
+                    "id": "default",
+                    "type": "front",
+                    "title": "Front print",
+                    "additional_price": null,
+                    "options": []
+                },
+                {
+                    "id": "back",
+                    "type": "back",
+                    "title": "Back print",
+                    "additional_price": "5.95",
+                    "options": []
+                },
+                {
+                    "id": "label_outside",
+                    "type": "label_outside",
+                    "title": "Outside label",
+                    "additional_price": "2.49",
+                    "options": []
+                },
+                {
+                    "id": "sleeve_left",
+                    "type": "sleeve_left",
+                    "title": "Left sleeve",
+                    "additional_price": "2.49",
+                    "options": []
+                },
+                {
+                    "id": "sleeve_right",
+                    "type": "sleeve_right",
+                    "title": "Right sleeve",
+                    "additional_price": "2.49",
+                    "options": []
+                },
+                {
+                    "id": "embroidery_chest_left",
+                    "type": "embroidery_chest_left",
+                    "title": "Left chest",
+                    "additional_price": "2.95",
+                    "options": []
+                },
+                {
+                    "id": "embroidery_chest_center",
+                    "type": "embroidery_chest_center",
+                    "title": "Center chest",
+                    "additional_price": "2.95",
+                    "options": []
+                },
+                {
+                    "id": "preview",
+                    "type": "mockup",
+                    "title": "Mockup",
+                    "additional_price": null,
+                    "options": []
+                }
+            ],
+            "origin_country": "Bangladesh"
+        },
+        "variants": [
+            {
+                "id": 13017,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Army / 2XL)",
+                "size": "2XL",
+                "color": "Army",
+                "color_code": "#665936",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13017_1627644833.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13015,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Army / L)",
+                "size": "L",
+                "color": "Army",
+                "color_code": "#665936",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13015_1627644835.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13014,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Army / M)",
+                "size": "M",
+                "color": "Army",
+                "color_code": "#665936",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13014_1627644839.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13013,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Army / S)",
+                "size": "S",
+                "color": "Army",
+                "color_code": "#665936",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13013_1627644843.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13016,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Army / XL)",
+                "size": "XL",
+                "color": "Army",
+                "color_code": "#665936",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13016_1627644845.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11623,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Athletic Heather / 2XL)",
+                "size": "2XL",
+                "color": "Athletic Heather",
+                "color_code": "#afafaa",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11623_1595946395.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13250,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Athletic Heather / 3XL)",
+                "size": "3XL",
+                "color": "Athletic Heather",
+                "color_code": "#afafaa",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13250_1628848620.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11621,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Athletic Heather / L)",
+                "size": "L",
+                "color": "Athletic Heather",
+                "color_code": "#afafaa",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11623_1595946395.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11620,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Athletic Heather / M)",
+                "size": "M",
+                "color": "Athletic Heather",
+                "color_code": "#afafaa",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11620_1595946399.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11619,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Athletic Heather / S)",
+                "size": "S",
+                "color": "Athletic Heather",
+                "color_code": "#afafaa",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11619_1595946400.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11622,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Athletic Heather / XL)",
+                "size": "XL",
+                "color": "Athletic Heather",
+                "color_code": "#afafaa",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11622_1595946402.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11608,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Black / 2XL)",
+                "size": "2XL",
+                "color": "Black",
+                "color_code": "#191919",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11608_1595946438.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13247,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Black / 3XL)",
+                "size": "3XL",
+                "color": "Black",
+                "color_code": "#191919",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13247_1628848625.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11606,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Black / L)",
+                "size": "L",
+                "color": "Black",
+                "color_code": "#191919",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11606_1595946440.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11605,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Black / M)",
+                "size": "M",
+                "color": "Black",
+                "color_code": "#191919",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11605_1595946442.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11604,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Black / S)",
+                "size": "S",
+                "color": "Black",
+                "color_code": "#191919",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11604_1595946446.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11607,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Black / XL)",
+                "size": "XL",
+                "color": "Black",
+                "color_code": "#191919",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11607_1595946444.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13022,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Burgundy / 2XL)",
+                "size": "2XL",
+                "color": "Burgundy",
+                "color_code": "#5a1d24",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13022_1627644856.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13020,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Burgundy / L)",
+                "size": "L",
+                "color": "Burgundy",
+                "color_code": "#5a1d24",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13020_1627644858.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13019,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Burgundy / M)",
+                "size": "M",
+                "color": "Burgundy",
+                "color_code": "#5a1d24",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13019_1627644862.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13018,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Burgundy / S)",
+                "size": "S",
+                "color": "Burgundy",
+                "color_code": "#5a1d24",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13018_1627644870.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13021,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Burgundy / XL)",
+                "size": "XL",
+                "color": "Burgundy",
+                "color_code": "#5a1d24",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13021_1627644874.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13027,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Camel / 2XL)",
+                "size": "2XL",
+                "color": "Camel",
+                "color_code": "#b77e3b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13027_1627644882.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13025,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Camel / L)",
+                "size": "L",
+                "color": "Camel",
+                "color_code": "#b77e3b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13025_1627644884.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13024,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Camel / M)",
+                "size": "M",
+                "color": "Camel",
+                "color_code": "#b77e3b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13024_1627644888.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13023,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Camel / S)",
+                "size": "S",
+                "color": "Camel",
+                "color_code": "#b77e3b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13023_1627644893.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13026,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Camel / XL)",
+                "size": "XL",
+                "color": "Camel",
+                "color_code": "#b77e3b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13026_1627644897.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11617,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Charcoal / 2XL)",
+                "size": "2XL",
+                "color": "Charcoal",
+                "color_code": "#686a64",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11617_1663736264.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13251,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Charcoal / 3XL)",
+                "size": "3XL",
+                "color": "Charcoal",
+                "color_code": "#686a64",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13251_1663736264.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11616,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Charcoal / L)",
+                "size": "L",
+                "color": "Charcoal",
+                "color_code": "#686a64",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11616_1663736264.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11615,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Charcoal / M)",
+                "size": "M",
+                "color": "Charcoal",
+                "color_code": "#686a64",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11615_1663736269.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11614,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Charcoal / S)",
+                "size": "S",
+                "color": "Charcoal",
+                "color_code": "#686a64",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11614_1663736275.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11618,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Charcoal / XL)",
+                "size": "XL",
+                "color": "Charcoal",
+                "color_code": "#686a64",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11618_1663736278.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13032,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Dark Chocolate / 2XL)",
+                "size": "2XL",
+                "color": "Dark Chocolate",
+                "color_code": "#473226",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13032_1627644966.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13030,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Dark Chocolate / L)",
+                "size": "L",
+                "color": "Dark Chocolate",
+                "color_code": "#473226",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13030_1627644969.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13029,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Dark Chocolate / M)",
+                "size": "M",
+                "color": "Dark Chocolate",
+                "color_code": "#473226",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13029_1627644972.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13028,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Dark Chocolate / S)",
+                "size": "S",
+                "color": "Dark Chocolate",
+                "color_code": "#473226",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13028_1627644977.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13031,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Dark Chocolate / XL)",
+                "size": "XL",
+                "color": "Dark Chocolate",
+                "color_code": "#473226",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13031_1627644980.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13037,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Natural / 2XL)",
+                "size": "2XL",
+                "color": "Natural",
+                "color_code": "#fff8e6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13037_1627907047.jpg",
+                "price": "19.95",
+                "in_stock": false,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "supplier_out_of_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13035,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Natural / L)",
+                "size": "L",
+                "color": "Natural",
+                "color_code": "#fff8e6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13035_1627907049.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13034,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Natural / M)",
+                "size": "M",
+                "color": "Natural",
+                "color_code": "#fff8e6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13034_1627907054.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13033,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Natural / S)",
+                "size": "S",
+                "color": "Natural",
+                "color_code": "#fff8e6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13033_1627907058.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13036,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Natural / XL)",
+                "size": "XL",
+                "color": "Natural",
+                "color_code": "#fff8e6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13036_1627907062.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13042,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Navy / 2XL)",
+                "size": "2XL",
+                "color": "Navy",
+                "color_code": "#1b1f25",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13042_1627645016.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13249,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Navy / 3XL)",
+                "size": "3XL",
+                "color": "Navy",
+                "color_code": "#1b1f25",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13249_1628848644.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13040,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Navy / L)",
+                "size": "L",
+                "color": "Navy",
+                "color_code": "#1b1f25",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13040_1627645020.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13039,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Navy / M)",
+                "size": "M",
+                "color": "Navy",
+                "color_code": "#1b1f25",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13039_1627645024.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13038,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Navy / S)",
+                "size": "S",
+                "color": "Navy",
+                "color_code": "#1b1f25",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13038_1627645028.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13041,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Navy / XL)",
+                "size": "XL",
+                "color": "Navy",
+                "color_code": "#1b1f25",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13041_1627645031.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13047,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Blue / 2XL)",
+                "size": "2XL",
+                "color": "Pale Blue",
+                "color_code": "#bed3d6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13047_1627645039.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13045,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Blue / L)",
+                "size": "L",
+                "color": "Pale Blue",
+                "color_code": "#bed3d6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13045_1627645041.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13044,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Blue / M)",
+                "size": "M",
+                "color": "Pale Blue",
+                "color_code": "#bed3d6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13044_1627645045.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13043,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Blue / S)",
+                "size": "S",
+                "color": "Pale Blue",
+                "color_code": "#bed3d6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13043_1627645049.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13046,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Blue / XL)",
+                "size": "XL",
+                "color": "Pale Blue",
+                "color_code": "#bed3d6",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13046_1627645053.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13052,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Pink / 2XL)",
+                "size": "2XL",
+                "color": "Pale Pink",
+                "color_code": "#ffdcc0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13052_1627907076.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13050,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Pink / L)",
+                "size": "L",
+                "color": "Pale Pink",
+                "color_code": "#ffdcc0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13050_1627907124.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13049,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Pink / M)",
+                "size": "M",
+                "color": "Pale Pink",
+                "color_code": "#ffdcc0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13049_1627907131.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13048,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Pink / S)",
+                "size": "S",
+                "color": "Pale Pink",
+                "color_code": "#ffdcc0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13048_1627907138.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13051,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Pale Pink / XL)",
+                "size": "XL",
+                "color": "Pale Pink",
+                "color_code": "#ffdcc0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13051_1627907144.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13057,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Tan / 2XL)",
+                "size": "2XL",
+                "color": "Tan",
+                "color_code": "#d7af80",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13057_1627645078.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13055,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Tan / L)",
+                "size": "L",
+                "color": "Tan",
+                "color_code": "#d7af80",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13055_1627645084.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13054,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Tan / M)",
+                "size": "M",
+                "color": "Tan",
+                "color_code": "#d7af80",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13054_1627645087.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13053,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Tan / S)",
+                "size": "S",
+                "color": "Tan",
+                "color_code": "#d7af80",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13053_1627645093.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13056,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Tan / XL)",
+                "size": "XL",
+                "color": "Tan",
+                "color_code": "#d7af80",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13056_1627645097.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11613,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (White / 2XL)",
+                "size": "2XL",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11613_1595946506.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13248,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (White / 3XL)",
+                "size": "3XL",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13248_1628848655.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11611,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (White / L)",
+                "size": "L",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11611_1595946508.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11610,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (White / M)",
+                "size": "M",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11610_1595946510.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11609,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (White / S)",
+                "size": "S",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11609_1595946512.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 11612,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (White / XL)",
+                "size": "XL",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/11612_1595946514.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13062,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Yellow / 2XL)",
+                "size": "2XL",
+                "color": "Yellow",
+                "color_code": "#ffac0b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13062_1627645101.jpg",
+                "price": "19.95",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13060,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Yellow / L)",
+                "size": "L",
+                "color": "Yellow",
+                "color_code": "#ffac0b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13060_1627645105.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13059,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Yellow / M)",
+                "size": "M",
+                "color": "Yellow",
+                "color_code": "#ffac0b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13059_1627645109.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13058,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Yellow / S)",
+                "size": "S",
+                "color": "Yellow",
+                "color_code": "#ffac0b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13058_1627645114.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            },
+            {
+                "id": 13061,
+                "product_id": 440,
+                "name": "AS Colour Staple 5001 (Yellow / XL)",
+                "size": "XL",
+                "color": "Yellow",
+                "color_code": "#ffac0b",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/440/13061_1627645116.jpg",
+                "price": "18.25",
+                "in_stock": true,
+                "availability_regions": {
+                    "AU": "Australia"
+                },
+                "availability_status": [
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": []
+            }
+        ]
+    },
+    "extra": []
+}

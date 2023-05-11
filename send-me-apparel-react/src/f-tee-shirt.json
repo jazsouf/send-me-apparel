@@ -1,0 +1,1634 @@
+{
+    "code": 200,
+    "result": {
+        "product": {
+            "id": 110,
+            "main_category_id": 32,
+            "type": "T-SHIRT",
+            "description": "Your typical 100% cotton t-shirt (except for Heather Grey, Dark Heather Grey, Heather Green, and Heather Blue colors that contain polyester). Pre-shrunk to make sure your size is maintained throughout several washes, and a classic fit.\r\n\r\n• 100% combed ringspun cotton \r\n• Heather Grey is 90% combed ringspun cotton and 10% polyester\r\n• Dark Heather Grey, Heather Green, and Heather Blue are 35% combed ringspun cotton and 65% polyester\r\n• Fabric weight: 4.3 oz/yd² (145.8 g/m²)\r\n• 30 singles\r\n• Classic semi-contoured silhouette with side seam\r\n• Tear-away label\r\n• Shoulder-to-shoulder taping\r\n• Seamed collarette\r\n• Double-needle stitched sleeves and bottom hem\r\n• Blank product sourced from Honduras, Haiti, or Nicaragua",
+            "type_name": "T-Shirt",
+            "title": "Women's Fashion Fit T-Shirt | Gildan 880",
+            "brand": "Gildan",
+            "model": "880 Ladies Ringspun Fashion Fit T-Shirt",
+            "image": "https://files.cdn.printful.com/o/upload/product-catalog-img/fb/fbad5d7d08287b4158894b698118b489_l",
+            "variant_count": 45,
+            "currency": "USD",
+            "options": [
+                {
+                    "id": "thread_colors_chest_left",
+                    "title": "Left chest thread colors",
+                    "type": "multi_select",
+                    "values": {
+                        "#FFFFFF": "1801 White",
+                        "#000000": "1800 Black",
+                        "#96A1A8": "1718 Grey",
+                        "#A67843": "1672 Old Gold",
+                        "#FFCC00": "1951 Gold",
+                        "#E25C27": "1987 Orange",
+                        "#CC3366": "1910 Flamingo",
+                        "#CC3333": "1839 Red",
+                        "#660000": "1784 Maroon",
+                        "#333366": "1966 Navy",
+                        "#005397": "1842 Royal",
+                        "#3399FF": "1695 Aqua/Teal",
+                        "#6B5294": "1832 Purple",
+                        "#01784E": "1751 Kelly Green",
+                        "#7BA35A": "1848 Kiwi Green"
+                    },
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                },
+                {
+                    "id": "thread_colors_chest_center",
+                    "title": "Center chest thread colors",
+                    "type": "multi_select",
+                    "values": {
+                        "#FFFFFF": "1801 White",
+                        "#000000": "1800 Black",
+                        "#96A1A8": "1718 Grey",
+                        "#A67843": "1672 Old Gold",
+                        "#FFCC00": "1951 Gold",
+                        "#E25C27": "1987 Orange",
+                        "#CC3366": "1910 Flamingo",
+                        "#CC3333": "1839 Red",
+                        "#660000": "1784 Maroon",
+                        "#333366": "1966 Navy",
+                        "#005397": "1842 Royal",
+                        "#3399FF": "1695 Aqua/Teal",
+                        "#6B5294": "1832 Purple",
+                        "#01784E": "1751 Kelly Green",
+                        "#7BA35A": "1848 Kiwi Green"
+                    },
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                },
+                {
+                    "id": "notes",
+                    "title": "Embroidery notes",
+                    "type": "text",
+                    "values": null,
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                },
+                {
+                    "id": "lifelike",
+                    "title": "Lifelike",
+                    "type": "bool",
+                    "values": null,
+                    "additional_price": null,
+                    "additional_price_breakdown": []
+                }
+            ],
+            "dimensions": null,
+            "is_discontinued": false,
+            "avg_fulfillment_time": null,
+            "techniques": [
+                {
+                    "key": "EMBROIDERY",
+                    "display_name": "Embroidery",
+                    "is_default": false
+                },
+                {
+                    "key": "DTG",
+                    "display_name": "DTG printing",
+                    "is_default": true
+                }
+            ],
+            "files": [
+                {
+                    "id": "embroidery_chest_left",
+                    "type": "embroidery_chest_left",
+                    "title": "Left chest",
+                    "additional_price": "2.95",
+                    "options": []
+                },
+                {
+                    "id": "embroidery_chest_center",
+                    "type": "embroidery_chest_center",
+                    "title": "Center chest",
+                    "additional_price": "2.95",
+                    "options": []
+                },
+                {
+                    "id": "default",
+                    "type": "front",
+                    "title": "Front print",
+                    "additional_price": null,
+                    "options": []
+                },
+                {
+                    "id": "back",
+                    "type": "back",
+                    "title": "Back print",
+                    "additional_price": "5.95",
+                    "options": []
+                },
+                {
+                    "id": "label_inside",
+                    "type": "label_inside",
+                    "title": "Inside label",
+                    "additional_price": "2.49",
+                    "options": []
+                },
+                {
+                    "id": "label_outside",
+                    "type": "label_outside",
+                    "title": "Outside label",
+                    "additional_price": "2.49",
+                    "options": []
+                },
+                {
+                    "id": "preview",
+                    "type": "mockup",
+                    "title": "Mockup",
+                    "additional_price": null,
+                    "options": []
+                }
+            ],
+            "origin_country": "Honduras"
+        },
+        "variants": [
+            {
+                "id": 4906,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Black / 2XL)",
+                "size": "2XL",
+                "color": "Black",
+                "color_code": "#131313",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4906_1637071070.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "AU": "Australia",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4904,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Black / L)",
+                "size": "L",
+                "color": "Black",
+                "color_code": "#131313",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4904_1637071071.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "AU": "Australia",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4903,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Black / M)",
+                "size": "M",
+                "color": "Black",
+                "color_code": "#131313",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4903_1637071071.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "AU": "Australia",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4902,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Black / S)",
+                "size": "S",
+                "color": "Black",
+                "color_code": "#131313",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4902_1637071073.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "AU": "Australia",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4905,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Black / XL)",
+                "size": "XL",
+                "color": "Black",
+                "color_code": "#131313",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4905_1637071080.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "AU": "Australia",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "AU",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4911,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Caribbean Blue / 2XL)",
+                "size": "2XL",
+                "color": "Caribbean Blue",
+                "color_code": "#03b4da",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4911_1637071173.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "stocked_on_demand"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4909,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Caribbean Blue / L)",
+                "size": "L",
+                "color": "Caribbean Blue",
+                "color_code": "#03b4da",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4909_1637071173.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "stocked_on_demand"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4908,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Caribbean Blue / M)",
+                "size": "M",
+                "color": "Caribbean Blue",
+                "color_code": "#03b4da",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4908_1637071175.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4907,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Caribbean Blue / S)",
+                "size": "S",
+                "color": "Caribbean Blue",
+                "color_code": "#03b4da",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4907_1637071184.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "stocked_on_demand"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4910,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Caribbean Blue / XL)",
+                "size": "XL",
+                "color": "Caribbean Blue",
+                "color_code": "#03b4da",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4910_1637071185.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4916,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Charity Pink / 2XL)",
+                "size": "2XL",
+                "color": "Charity Pink",
+                "color_code": "#ffb3c7",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4916_1637071194.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4914,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Charity Pink / L)",
+                "size": "L",
+                "color": "Charity Pink",
+                "color_code": "#ffb3c7",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4914_1637071193.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4913,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Charity Pink / M)",
+                "size": "M",
+                "color": "Charity Pink",
+                "color_code": "#ffb3c7",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4913_1637071199.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "JP": "Japan"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "JP",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4912,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Charity Pink / S)",
+                "size": "S",
+                "color": "Charity Pink",
+                "color_code": "#ffb3c7",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4912_1637071204.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4915,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Charity Pink / XL)",
+                "size": "XL",
+                "color": "Charity Pink",
+                "color_code": "#ffb3c7",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4915_1637071205.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 6314,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Dark Grey / 2XL)",
+                "size": "2XL",
+                "color": "Heather Dark Grey",
+                "color_code": "#262f36",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/6314_1637071231.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "polyester",
+                        "percentage": 65
+                    },
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 35
+                    }
+                ]
+            },
+            {
+                "id": 6315,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Dark Grey / L)",
+                "size": "L",
+                "color": "Heather Dark Grey",
+                "color_code": "#262f36",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/6315_1637071233.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "polyester",
+                        "percentage": 65
+                    },
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 35
+                    }
+                ]
+            },
+            {
+                "id": 6316,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Dark Grey / M)",
+                "size": "M",
+                "color": "Heather Dark Grey",
+                "color_code": "#262f36",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/6316_1637071235.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "polyester",
+                        "percentage": 65
+                    },
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 35
+                    }
+                ]
+            },
+            {
+                "id": 6317,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Dark Grey / S)",
+                "size": "S",
+                "color": "Heather Dark Grey",
+                "color_code": "#262f36",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/6317_1637071244.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "polyester",
+                        "percentage": 65
+                    },
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 35
+                    }
+                ]
+            },
+            {
+                "id": 6318,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Dark Grey / XL)",
+                "size": "XL",
+                "color": "Heather Dark Grey",
+                "color_code": "#262f36",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/6318_1637071244.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "polyester",
+                        "percentage": 65
+                    },
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 35
+                    }
+                ]
+            },
+            {
+                "id": 4921,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Grey / 2XL)",
+                "size": "2XL",
+                "color": "Heather Grey",
+                "color_code": "#928d92",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4921_1637071276.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "cotton",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "polyester",
+                        "percentage": 10
+                    }
+                ]
+            },
+            {
+                "id": 4919,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Grey / L)",
+                "size": "L",
+                "color": "Heather Grey",
+                "color_code": "#928d92",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4919_1637071283.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "cotton",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "polyester",
+                        "percentage": 10
+                    }
+                ]
+            },
+            {
+                "id": 4918,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Grey / M)",
+                "size": "M",
+                "color": "Heather Grey",
+                "color_code": "#928d92",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4918_1637071284.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "cotton",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "polyester",
+                        "percentage": 10
+                    }
+                ]
+            },
+            {
+                "id": 4917,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Grey / S)",
+                "size": "S",
+                "color": "Heather Grey",
+                "color_code": "#928d92",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4917_1637071285.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "cotton",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "polyester",
+                        "percentage": 10
+                    }
+                ]
+            },
+            {
+                "id": 4920,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Heather Grey / XL)",
+                "size": "XL",
+                "color": "Heather Grey",
+                "color_code": "#928d92",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4920_1637071296.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "cotton",
+                        "percentage": 90
+                    },
+                    {
+                        "name": "polyester",
+                        "percentage": 10
+                    }
+                ]
+            },
+            {
+                "id": 4941,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Navy / 2XL)",
+                "size": "2XL",
+                "color": "Navy",
+                "color_code": "#111a29",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4941_1637071359.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "stocked_on_demand"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4939,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Navy / L)",
+                "size": "L",
+                "color": "Navy",
+                "color_code": "#111a29",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4939_1637071359.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4938,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Navy / M)",
+                "size": "M",
+                "color": "Navy",
+                "color_code": "#111a29",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4938_1637071359.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "JP": "Japan",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "JP",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4937,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Navy / S)",
+                "size": "S",
+                "color": "Navy",
+                "color_code": "#111a29",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4937_1637071370.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "JP": "Japan",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "JP",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "stocked_on_demand"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4940,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Navy / XL)",
+                "size": "XL",
+                "color": "Navy",
+                "color_code": "#111a29",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4940_1637071369.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4946,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Red / 2XL)",
+                "size": "2XL",
+                "color": "True Red",
+                "color_code": "#c50d27",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4946_1637071370.jpg",
+                "price": "17.45",
+                "in_stock": false,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "supplier_out_of_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "supplier_out_of_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4944,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Red / L)",
+                "size": "L",
+                "color": "True Red",
+                "color_code": "#c50d27",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4944_1637071380.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4943,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Red / M)",
+                "size": "M",
+                "color": "True Red",
+                "color_code": "#c50d27",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4943_1637071380.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4942,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Red / S)",
+                "size": "S",
+                "color": "True Red",
+                "color_code": "#c50d27",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4942_1637071381.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "stocked_on_demand"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4945,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Red / XL)",
+                "size": "XL",
+                "color": "True Red",
+                "color_code": "#c50d27",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4945_1637071390.jpg",
+                "price": "15.45",
+                "in_stock": false,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "supplier_out_of_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "supplier_out_of_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4951,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Royal Blue / 2XL)",
+                "size": "2XL",
+                "color": "Royal Blue",
+                "color_code": "#1a4aa0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4951_1637071390.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4949,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Royal Blue / L)",
+                "size": "L",
+                "color": "Royal Blue",
+                "color_code": "#1a4aa0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4949_1637071391.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4948,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Royal Blue / M)",
+                "size": "M",
+                "color": "Royal Blue",
+                "color_code": "#1a4aa0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4948_1637071401.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4947,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Royal Blue / S)",
+                "size": "S",
+                "color": "Royal Blue",
+                "color_code": "#1a4aa0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4947_1637071402.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4950,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (Royal Blue / XL)",
+                "size": "XL",
+                "color": "Royal Blue",
+                "color_code": "#1a4aa0",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4950_1637071411.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4901,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (White / 2XL)",
+                "size": "2XL",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4901_1637071484.jpg",
+                "price": "17.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4899,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (White / L)",
+                "size": "L",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4899_1637071490.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4898,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (White / M)",
+                "size": "M",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4898_1637071490.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4897,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (White / S)",
+                "size": "S",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4897_1637071494.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            },
+            {
+                "id": 4900,
+                "product_id": 110,
+                "name": "Anvil 880 Ladies Ringspun Fashion Fit T-Shirt with Tear Away Label (White / XL)",
+                "size": "XL",
+                "color": "White",
+                "color_code": "#ffffff",
+                "color_code2": null,
+                "image": "https://files.cdn.printful.com/products/110/4900_1637071502.jpg",
+                "price": "15.45",
+                "in_stock": true,
+                "availability_regions": {
+                    "US": "United States",
+                    "CA": "Canada",
+                    "BR": "Brazil"
+                },
+                "availability_status": [
+                    {
+                        "region": "US",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "CA",
+                        "status": "in_stock"
+                    },
+                    {
+                        "region": "BR",
+                        "status": "in_stock"
+                    }
+                ],
+                "material": [
+                    {
+                        "name": "combed ring spun cotton",
+                        "percentage": 100
+                    }
+                ]
+            }
+        ]
+    },
+    "extra": []
+}
