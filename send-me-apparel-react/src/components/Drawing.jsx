@@ -1,15 +1,19 @@
 import React, { useState, createRef, useRef } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
+import { paths } from "../assets/paths";
 
 const Drawing = () => {
   const initialState = {
-    some: " ",
+    imagePath: " ",
+    canvasPath: "",
+    savePaths: paths,
+    svgElement: null,
     color: "#111111",
     bgrColor: "#EEEEEE",
     penSize: 5,
     eraserSize: 5,
     eraserOn: false,
-    otherMode: "Eraser",
+    otherMode: "Brush",
     saveWithBgr: true,
   };
 
@@ -56,7 +60,7 @@ const Drawing = () => {
               .exportImage("png")
               .then((data) => {
                 console.log(data);
-                setState({ ...state, some: data });
+                setState({ ...state, imagePath: data });
               })
               .catch((e) => {
                 console.log(e);
@@ -67,9 +71,37 @@ const Drawing = () => {
         </button>
         <button
           onClick={() => {
+            canvas.current.exportSvg().then((svg) => {
+              console.log(svg);
+              setState({ ...state, svgElement: svg });
+            });
+          }}
+        >
+          Export SVG
+        </button>
+        <button
+          onClick={() => {
+            canvas.current.exportPaths().then((path) => {
+              console.log(path);
+              // setState({ ...state, canvasPath: path });
+            });
+          }}
+        >
+          Export Path
+        </button>
+        <button
+          onClick={() => {
+            canvas.current.loadPaths(paths[0]);
+            // setState({ ...state, canvasPath: path });
+          }}
+        >
+          Load Drawing
+        </button>
+        <button
+          onClick={() => {
             canvas.current.eraseMode(!state.eraserOn);
             state.otherMode === "Eraser"
-              ? setState({ ...state, eraserOn: true, otherMode: "Pen" })
+              ? setState({ ...state, eraserOn: true, otherMode: "Brush" })
               : setState({ ...state, eraserOn: false, otherMode: "Eraser" });
           }}
         >
@@ -100,33 +132,45 @@ const Drawing = () => {
           Undo
         </button>
         <div>
+          <label htmlFor="color">Brush Color</label>
           <input
             type="color"
+            name="color"
+            id="color"
             value={state.color}
             onChange={(e) => selectPenColor(e.target.value)}
           />
+          <label htmlFor="bgrColor">Background Color</label>
           <input
             type="color"
+            name="bgrColor"
+            id="bgrColor"
             value={state.bgrColor}
             onChange={(e) => selectBgrColor(e.target.value)}
           />
           <input
             type="range"
+            name="penSize"
+            id="penSize"
             min="0"
             max="42"
-            value={state.thickness}
+            value={state.penSize}
             onChange={(e) => selectPenSize(e.target.value)}
           />
+          <label htmlFor="penSize">{state.penSize}</label>
           <input
             type="range"
+            name="eraserSize"
+            id="eraserSize"
             min="0"
             max="42"
-            value={state.thickness}
+            value={state.eraserSize}
             onChange={(e) => selectEraserSize(e.target.value)}
           />
+          <label htmlFor="eraserSize">{state.eraserSize}</label>
         </div>
       </fieldset>
-      {state.some !== "" && <img src={state.some} />}
+      {state.some !== "" && <img src={state.imagePath} />}
     </div>
   );
 };
