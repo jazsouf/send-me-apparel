@@ -1,15 +1,15 @@
-import React, { useState, createRef, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
 import { paths } from "../assets/paths";
+import axios from "axios";
 
 const Drawing = () => {
   const initialState = {
-    imagePath: " ",
+    imagePath: "",
     canvasPath: "",
-    savePaths: paths,
     svgElement: null,
-    color: "#111111",
-    bgrColor: "#EEEEEE",
+    color: "#123456",
+    bgrColor: "#FEDCBA",
     penSize: 5,
     eraserSize: 5,
     eraserOn: false,
@@ -20,7 +20,6 @@ const Drawing = () => {
   const [state, setState] = useState(initialState);
 
   const canvas = useRef(null);
-  console.log(canvas);
 
   const selectPenColor = (col) => {
     setState({ ...state, color: col });
@@ -30,6 +29,10 @@ const Drawing = () => {
     setState({ ...state, bgrColor: col });
   };
 
+  const selectBgrTransparent = () => {
+    setState({ ...state, bgrColor: "#00000000" });
+  };
+
   const selectPenSize = (size) => {
     setState({ ...state, penSize: size });
   };
@@ -37,6 +40,62 @@ const Drawing = () => {
   const selectEraserSize = (size) => {
     setState({ ...state, eraserSize: size });
   };
+
+  const handleExportImg = () => {
+    canvas.current
+      .exportImage("png")
+      .then((imgData) => {
+        console.log(imgData);
+        setState({ ...state, imagePath: imgData });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  const handleExportSVG = () => {
+    canvas.current.exportSvg().then((svg) => {
+      console.log(svg);
+      setState({ ...state, svgElement: svg });
+    });
+  };
+
+  const handleExportCanvas = () => {
+    canvas.current.exportPaths().then((blob) => {
+      console.log(blob);
+      setState({ ...state, canvasPath: blob });
+    });
+  };
+
+  const handleImportCanvas = () => {
+    canvas.current.loadPaths(paths[1]);
+  };
+
+  const handleToggleMode = () => {
+    canvas.current.eraseMode(!state.eraserOn);
+    state.otherMode === "Eraser"
+      ? setState({ ...state, eraserOn: true, otherMode: "Brush" })
+      : setState({ ...state, eraserOn: false, otherMode: "Eraser" });
+  };
+
+  const handleReset = () => {
+    setState(initialState);
+    canvas.current.eraseMode(false);
+    canvas.current.resetCanvas();
+  };
+
+  const handleRedo = () => {
+    canvas.current.redo();
+  };
+
+  const handleUndo = () => {
+    canvas.current.undo();
+  };
+
+  const handlePenColor = (e) => selectPenColor(e.target.value);
+  const handleBgrColor = (e) => selectBgrColor(e.target.value);
+  const handlePenSize = (e) => selectPenSize(e.target.value);
+  const handleEraserSize = (e) => selectEraserSize(e.target.value);
 
   return (
     <div>
@@ -54,83 +113,14 @@ const Drawing = () => {
       />
       <fieldset>
         <legend>Edit Your Style</legend>
-        <button
-          onClick={() => {
-            canvas.current
-              .exportImage("png")
-              .then((data) => {
-                console.log(data);
-                setState({ ...state, imagePath: data });
-              })
-              .catch((e) => {
-                console.log(e);
-              });
-          }}
-        >
-          Get Image
-        </button>
-        <button
-          onClick={() => {
-            canvas.current.exportSvg().then((svg) => {
-              console.log(svg);
-              setState({ ...state, svgElement: svg });
-            });
-          }}
-        >
-          Export SVG
-        </button>
-        <button
-          onClick={() => {
-            canvas.current.exportPaths().then((path) => {
-              console.log(path);
-              // setState({ ...state, canvasPath: path });
-            });
-          }}
-        >
-          Export Path
-        </button>
-        <button
-          onClick={() => {
-            canvas.current.loadPaths(paths[0]);
-            // setState({ ...state, canvasPath: path });
-          }}
-        >
-          Load Drawing
-        </button>
-        <button
-          onClick={() => {
-            canvas.current.eraseMode(!state.eraserOn);
-            state.otherMode === "Eraser"
-              ? setState({ ...state, eraserOn: true, otherMode: "Brush" })
-              : setState({ ...state, eraserOn: false, otherMode: "Eraser" });
-          }}
-        >
-          {state.otherMode}
-        </button>
-        <button
-          onClick={() => {
-            setState(initialState);
-            canvas.current.eraseMode(false);
-            canvas.current.resetCanvas();
-          }}
-        >
-          Reset
-        </button>
-
-        <button
-          onClick={() => {
-            canvas.current.redo();
-          }}
-        >
-          Redo
-        </button>
-        <button
-          onClick={() => {
-            canvas.current.undo();
-          }}
-        >
-          Undo
-        </button>
+        <button onClick={handleExportImg}>Get Image</button>
+        <button onClick={handleExportSVG}>Export SVG</button>
+        <button onClick={handleExportCanvas}>Export Canvas</button>
+        <button onClick={handleImportCanvas}>Load Existing Canvas</button>
+        <button onClick={handleToggleMode}>{state.otherMode}</button>
+        <button onClick={handleReset}>Reset</button>
+        <button onClick={handleRedo}>Redo</button>
+        <button onClick={handleUndo}>Undo</button>
         <div>
           <label htmlFor="color">Brush Color</label>
           <input
@@ -138,7 +128,7 @@ const Drawing = () => {
             name="color"
             id="color"
             value={state.color}
-            onChange={(e) => selectPenColor(e.target.value)}
+            onChange={handlePenColor}
           />
           <label htmlFor="bgrColor">Background Color</label>
           <input
@@ -146,8 +136,9 @@ const Drawing = () => {
             name="bgrColor"
             id="bgrColor"
             value={state.bgrColor}
-            onChange={(e) => selectBgrColor(e.target.value)}
+            onChange={handleBgrColor}
           />
+          <button onClick={selectBgrTransparent}>Transparent Background</button>
           <input
             type="range"
             name="penSize"
@@ -155,7 +146,7 @@ const Drawing = () => {
             min="0"
             max="42"
             value={state.penSize}
-            onChange={(e) => selectPenSize(e.target.value)}
+            onChange={handlePenSize}
           />
           <label htmlFor="penSize">{state.penSize}</label>
           <input
@@ -165,12 +156,12 @@ const Drawing = () => {
             min="0"
             max="42"
             value={state.eraserSize}
-            onChange={(e) => selectEraserSize(e.target.value)}
+            onChange={handleEraserSize}
           />
           <label htmlFor="eraserSize">{state.eraserSize}</label>
         </div>
       </fieldset>
-      {state.some !== "" && <img src={state.imagePath} />}
+      <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div>
     </div>
   );
 };

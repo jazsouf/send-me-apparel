@@ -3,11 +3,7 @@ import { ReactSketchCanvas } from "react-sketch-canvas";
 import Drawing from "./Drawing";
 
 function Create() {
-  return (
-    <div>
-      <Drawing />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Create;
