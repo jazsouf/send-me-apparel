@@ -70,15 +70,10 @@ const Drawing = () => {
   };
 
   const handleExportDrawingData = () => {
-    Promise.all([
-      handleExportCanvas(),
-      handleExportSVG(),
-      handleExportImg(),
-    ]).then((res) => {
+    Promise.all([handleExportCanvas(), handleExportSVG()]).then((res) => {
       console.log(res);
       axios
         .post("https://ironrest.fly.dev/api/send-me-apparel-drawings", {
-          img: res[2],
           svg: res[1],
           blob: res[0],
         })
