@@ -42,28 +42,50 @@ const Drawing = () => {
   };
 
   const handleExportImg = () => {
-    canvas.current
-      .exportImage("png")
-      .then((imgData) => {
-        console.log(imgData);
-        setState({ ...state, imagePath: imgData });
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    return canvas.current.exportImage("png");
+    // .then((imgData) => {
+    //   console.log("png", imgData);
+    //   setState({ ...state, imagePath: imgData });
+    // })
+    // .catch((e) => {
+    //   console.log(e);
+    // });
   };
 
   const handleExportSVG = () => {
-    canvas.current.exportSvg().then((svg) => {
-      console.log(svg);
-      setState({ ...state, svgElement: svg });
-    });
+    return canvas.current.exportSvg();
+    // .then((svg) => {
+    //   console.log("svg", svg);
+    //   setState({ ...state, svgElement: svg });
+    // });
   };
 
   const handleExportCanvas = () => {
-    canvas.current.exportPaths().then((blob) => {
-      console.log(blob);
-      setState({ ...state, canvasPath: blob });
+    return canvas.current.exportPaths();
+
+    // // .then((blob) => {
+    // //   console.log("blob", blob);
+    // //   setState({ ...state, canvasPath: blob });
+    // });
+  };
+
+  const handleExportDrawingData = () => {
+    Promise.all([
+      handleExportCanvas(),
+      handleExportSVG(),
+      handleExportImg(),
+    ]).then((res) => {
+      console.log(res);
+      axios
+        .post("https://ironrest.fly.dev/api/send-me-apparel-drawings", {
+          img: res[2],
+          svg: res[1],
+          blob: res[0],
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => console.log(error));
     });
   };
 
@@ -113,6 +135,7 @@ const Drawing = () => {
       />
       <fieldset>
         <legend>Edit Your Style</legend>
+        <button onClick={handleExportDrawingData}>Post Image</button>
         <button onClick={handleExportImg}>Get Image</button>
         <button onClick={handleExportSVG}>Export SVG</button>
         <button onClick={handleExportCanvas}>Export Canvas</button>
