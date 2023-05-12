@@ -10,8 +10,16 @@ import Cart from "./components/Cart";
 function App() {
   return (
     <>
-      <ItemsList />
-      <Drawing />
+      <DrawingList />
+
+      <Routes>
+        <Route path="/" element={<Create />} />
+        <Route path="/drawings" element={<DrawingList />} />
+        <Route path="/drawings/:id" element={<Drawing />} /> {/*nested route*/}
+        <Route path="/items" element={<ItemsList />} />
+        <Route path="/items/:id" element={<Item />} /> {/*nested route*/}
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </>
   );
 }
