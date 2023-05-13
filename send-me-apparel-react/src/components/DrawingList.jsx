@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function DrawingList() {
@@ -17,12 +18,13 @@ function DrawingList() {
   return (
     <ul>
       {drawingListArr.map((drawing) => {
-        console.log(drawing.svg);
-
         const svgString = `${drawing.svg}`;
+        console.log(drawing._id);
         return (
           <li key={drawing._id}>
-            <div dangerouslySetInnerHTML={{ __html: svgString }} />
+            <Link to={`/drawings/${drawing._id}`}>
+              <div dangerouslySetInnerHTML={{ __html: svgString }} />
+            </Link>
           </li>
         );
       })}
