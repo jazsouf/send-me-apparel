@@ -11,7 +11,7 @@ function Item() {
   const [item, setItem] = useState("");
   const [drawingImg, setDrawingImg] = useState("");
   const [sizing, setSizing] = useState(["S", "M", "L", "XL", "2XL"]);
-  const [selectSize, setSelectSize] = useState("Army");
+  const [selectSize, setSelectSize] = useState("M");
   const [price, setPrice] = useState("");
   const handleSelectChange = (event) => {
     setSelectSize(event.target.value);

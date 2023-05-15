@@ -12,8 +12,7 @@ const DrawingTool = ({ id }) => {
     svg: null,
     color: "#123456",
     bgrColor: "#FEDCBA",
-    penSize: 10,
-    eraserSize: 10,
+    toolSize: 10,
     saveWithBgr: true,
   };
   const [state, setState] = useState(initialState);
@@ -33,12 +32,8 @@ const DrawingTool = ({ id }) => {
     setState({ ...state, bgrColor: "#00000000" });
   };
 
-  const selectPenSize = (size) => {
-    setState({ ...state, penSize: size });
-  };
-
-  const selectEraserSize = (size) => {
-    setState({ ...state, eraserSize: size });
+  const selectToolSize = (size) => {
+    setState({ ...state, toolSize: size });
   };
 
   const handleExportImg = () => {
@@ -135,7 +130,7 @@ const DrawingTool = ({ id }) => {
 
   const handlePenColor = (e) => selectPenColor(e.target.value);
   const handleBgrColor = (e) => selectBgrColor(e.target.value);
-  const handlePenSize = (e) => selectPenSize(e.target.value);
+  const handleToolSize = (e) => selectToolSize(e.target.value);
   const handleEraserSize = (e) => selectEraserSize(e.target.value);
   id && handleImportCanvas(id);
   return (
@@ -147,8 +142,8 @@ const DrawingTool = ({ id }) => {
           height: "500px",
         }}
         ref={canvas}
-        strokeWidth={state.penSize}
-        eraserWidth={state.eraserSize}
+        strokeWidth={state.toolSize}
+        eraserWidth={state.toolSize}
         strokeColor={state.color}
         canvasColor={state.bgrColor}
       />
@@ -187,19 +182,9 @@ const DrawingTool = ({ id }) => {
             min="0"
             max="42"
             value={state.penSize}
-            onChange={handlePenSize}
+            onChange={handleToolSize}
           />
-          <label htmlFor="penSize">Brush: {state.penSize}</label>
-          <input
-            type="range"
-            name="eraserSize"
-            id="eraserSize"
-            min="0"
-            max="42"
-            value={state.eraserSize}
-            onChange={handleEraserSize}
-          />
-          <label htmlFor="eraserSize">Eraser: {state.eraserSize}</label>
+          <label htmlFor="penSize">{state.toolSize}</label>
         </div>
       </fieldset>
       <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div>

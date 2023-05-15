@@ -8,11 +8,9 @@ function ItemsList() {
   const [product, setProduct] = useState("");
   const [variants, setVariants] = useState([]);
   const [colors, setColors] = useState([]);
-  // const [sizing, setSizing] = useState([]);
   const [color_code, setColorCode] = useState([]);
-  const [selectSize, setSelectSize] = useState("Army");
   const [gender, setGender] = useState("m");
-  const [selectColor, setSelectColor] = useState("2XL");
+  const [selectColor, setSelectColor] = useState("White");
   const [url, setUrl] = useState(
     "https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05"
   );
@@ -23,7 +21,9 @@ function ItemsList() {
       .get(
         `https://ironrest.fly.dev/api/send-me-apparel-drawings/${params.drawing}`
       )
-      .then((response) => setDrawingImg(response.data.img))
+      .then((response) => {
+        setDrawingImg(response.data.img);
+      })
       .catch((error) => console.log(error));
   }
   function fetchItems() {
@@ -34,12 +34,19 @@ function ItemsList() {
         const { product, variants } = response.data.men.result;
         setVariants(variants);
         setProduct(product);
+        setFilteredTeeShirt(
+          variants.find((variant) => variant.color === "White")
+        );
       } else {
         setGender("f");
         const { product, variants } = response.data.woman.result;
         setVariants(variants);
         setProduct(product);
+        setFilteredTeeShirt(
+          variants.find((variant) => variant.color === "White")
+        );
       }
+
       // console.log(response.data.men.result);
     });
   }
@@ -55,39 +62,31 @@ function ItemsList() {
   useEffect(() => {
     fetchItems();
     fetchDrawing();
-  }, []);
+  }, [url]);
 
   useEffect(() => {
     createArrayFromVariants("color", setColors);
-    // createArrayFromVariants("size", setSizing);
+
     createArrayFromVariants("color_code", setColorCode);
   }, [variants]);
 
   function displayItems(url) {
     setUrl(url);
-    fetchItems();
     createArrayFromVariants("color", setColors);
-    // createArrayFromVariants("size", setSizing);
   }
 
   function selectAShirt(color) {
-    const filteredVariant = variants.find(
-      // ... => variant.size === size && ...
-      (variant) => variant.color === color
-    );
+    const filteredVariant = variants.find((variant) => variant.color === color);
     setFilteredTeeShirt(filteredVariant);
-    // console.log(filteredTeeShirt.id)
+    console.log(filteredTeeShirt);
   }
 
   useEffect(() => {
     selectAShirt(selectColor);
   }, [selectColor]);
 
-  // const handleSelectChange = (event) => {
-  //   setSelectSize(event.target.value);
-  // };
-
   const handleColorButtonClick = (color) => {
+    console.log(color);
     setSelectColor(color);
   };
 
@@ -120,15 +119,6 @@ function ItemsList() {
         Men
       </button>
 
-      {/* <select value={selectSize} onChange={handleSelectChange}>
-        <option value="">Select a Size</option>
-        {sizing.map((size) => (
-          <option key={size} value={size}>
-            {size}
-          </option>
-        ))}
-      </select> */}
-
       <div style={{ display: "flex" }}>
         {colors.map((color, index) => (
           // console.log(color)
@@ -145,32 +135,12 @@ function ItemsList() {
           ></button>
         ))}
       </div>
-      {/* {filteredTeeShirt && (
-        <>
-          <div
-            className="customWrapper"
-            style={{ display: "block", position: "relative" }}
-          >
-            <img
-              src={drawingImg}
-              alt=""
-              style={{
-                position: "absolute",
-                width: "25%",
-                top: "36%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                mixBlendMode: "multiply",
-              }}
-            />
 
-            <img src={filteredTeeShirt.image}></img>
-          </div>
-          <div>name: {filteredTeeShirt.name}</div>
-          <div>Size: {filteredTeeShirt.size}</div>
-        </>
-      )} */}
-      <CustomItem filteredTeeShirt={filteredTeeShirt} drawingImg={drawingImg} />
+      <CustomItem
+        filteredTeeShirt={filteredTeeShirt}
+        drawingImg={drawingImg}
+        default={selectAShirt}
+      />
       <button>
         <Link to={`/edit/${params.drawing}`}>Edit Drawing</Link>
       </button>
@@ -187,7 +157,7 @@ function ItemsList() {
               params.drawing
             }
           >
-            Go to Item
+            Validate Item
           </Link>
         </button>
       )}
