@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import CustomItem from "./CustomItem";
 
 function ItemsList() {
   const params = useParams();
   const [product, setProduct] = useState("");
   const [variants, setVariants] = useState([]);
   const [colors, setColors] = useState([]);
-  const [sizing, setSizing] = useState([]);
+  // const [sizing, setSizing] = useState([]);
   const [color_code, setColorCode] = useState([]);
   const [selectSize, setSelectSize] = useState("Army");
   const [gender, setGender] = useState("m");
@@ -58,7 +59,7 @@ function ItemsList() {
 
   useEffect(() => {
     createArrayFromVariants("color", setColors);
-    createArrayFromVariants("size", setSizing);
+    // createArrayFromVariants("size", setSizing);
     createArrayFromVariants("color_code", setColorCode);
   }, [variants]);
 
@@ -66,24 +67,25 @@ function ItemsList() {
     setUrl(url);
     fetchItems();
     createArrayFromVariants("color", setColors);
-    createArrayFromVariants("size", setSizing);
+    // createArrayFromVariants("size", setSizing);
   }
 
-  function selectAShirt(size, color) {
+  function selectAShirt(color) {
     const filteredVariant = variants.find(
-      (variant) => variant.size === size && variant.color === color
+      // ... => variant.size === size && ...
+      (variant) => variant.color === color
     );
     setFilteredTeeShirt(filteredVariant);
     // console.log(filteredTeeShirt.id)
   }
 
   useEffect(() => {
-    selectAShirt(selectSize, selectColor);
-  }, [selectSize, selectColor]);
+    selectAShirt(selectColor);
+  }, [selectColor]);
 
-  const handleSelectChange = (event) => {
-    setSelectSize(event.target.value);
-  };
+  // const handleSelectChange = (event) => {
+  //   setSelectSize(event.target.value);
+  // };
 
   const handleColorButtonClick = (color) => {
     setSelectColor(color);
@@ -105,10 +107,6 @@ function ItemsList() {
             "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
           )
         }
-        style={{
-          backgroundColor: "white",
-          border: "1px solid black",
-        }}
       >
         Women
       </button>
@@ -118,22 +116,18 @@ function ItemsList() {
             "https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05"
           )
         }
-        style={{
-          backgroundColor: "white",
-          border: "1px solid black",
-        }}
       >
         Men
       </button>
 
-      <select value={selectSize} onChange={handleSelectChange}>
+      {/* <select value={selectSize} onChange={handleSelectChange}>
         <option value="">Select a Size</option>
         {sizing.map((size) => (
           <option key={size} value={size}>
             {size}
           </option>
         ))}
-      </select>
+      </select> */}
 
       <div style={{ display: "flex" }}>
         {colors.map((color, index) => (
@@ -151,8 +145,7 @@ function ItemsList() {
           ></button>
         ))}
       </div>
-
-      {filteredTeeShirt && (
+      {/* {filteredTeeShirt && (
         <>
           <div
             className="customWrapper"
@@ -176,13 +169,25 @@ function ItemsList() {
           <div>name: {filteredTeeShirt.name}</div>
           <div>Size: {filteredTeeShirt.size}</div>
         </>
-      )}
-
+      )} */}
+      <CustomItem filteredTeeShirt={filteredTeeShirt} drawingImg={drawingImg} />
+      <button>
+        <Link to={`/edit/${params.drawing}`}>Edit Drawing</Link>
+      </button>
       {product.description}
       {filteredTeeShirt && (
         <button>
-          <Link to={"/cart/" + gender + "/" + filteredTeeShirt.id}>
-            Go to Cart
+          <Link
+            to={
+              "/item/" +
+              gender +
+              "/" +
+              filteredTeeShirt.id +
+              "/" +
+              params.drawing
+            }
+          >
+            Go to Item
           </Link>
         </button>
       )}

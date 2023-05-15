@@ -18,12 +18,6 @@ function DrawingList() {
   return (
     <ul>
       {drawingListArr.map((drawing) => {
-        {
-          /* const svgString = `${drawing.svg}`; */
-        }
-        {
-          /* console.log(drawing._id); */
-        }
         return (
           <li key={drawing._id}>
             <Link to={`/drawings/${drawing._id}`}>
