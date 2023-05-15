@@ -1,24 +1,26 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
+import { useNavigate } from "react-router-dom";
 import { paths } from "../assets/paths";
 import axios from "axios";
 
 const DrawingTool = ({ id }) => {
   console.log(id);
   const initialState = {
-    imagePath: "",
-    canvasPath: "",
-    svgElement: null,
+    img: "",
+    blob: "",
+    svg: null,
     color: "#123456",
     bgrColor: "#FEDCBA",
     penSize: 5,
     eraserSize: 5,
     eraserOn: false,
-    otherMode: "Brush",
+    otherMode: "Eraser",
     saveWithBgr: true,
   };
 
   const [state, setState] = useState(initialState);
+  const [drawingId, setDrawingId] = useState("");
 
   const canvas = useRef(null);
   const selectPenColor = (col) => {
@@ -43,42 +45,34 @@ const DrawingTool = ({ id }) => {
 
   const handleExportImg = () => {
     return canvas.current.exportImage("png");
-    // .then((imgData) => {
-    //   console.log("png", imgData);
-    //   setState({ ...state, imagePath: imgData });
-    // })
-    // .catch((e) => {
-    //   console.log(e);
-    // });
   };
 
   const handleExportSVG = () => {
     return canvas.current.exportSvg();
-    // .then((svg) => {
-    //   console.log("svg", svg);
-    //   setState({ ...state, svgElement: svg });
-    // });
   };
 
   const handleExportCanvas = () => {
     return canvas.current.exportPaths();
-
-    // // .then((blob) => {
-    // //   console.log("blob", blob);
-    // //   setState({ ...state, canvasPath: blob });
-    // });
   };
-
+  const navigate = useNavigate();
   const handleExportDrawingData = () => {
-    Promise.all([handleExportCanvas(), handleExportSVG()]).then((res) => {
+    Promise.all([
+      handleExportCanvas(),
+      handleExportSVG(),
+      handleExportImg(),
+    ]).then((res) => {
       console.log(res);
+      setState({ ...state, blob: res[0], svg: res[1], img: res[2] });
       axios
         .post("https://ironrest.fly.dev/api/send-me-apparel-drawings", {
-          svg: res[1],
           blob: res[0],
+          svg: res[1],
+          img: res[2],
         })
         .then((response) => {
-          console.log(response);
+          console.log(response.data.insertedId);
+
+          navigate(`/items/${response.data.insertedId}`);
         })
         .catch((error) => console.log(error));
     });
@@ -136,10 +130,12 @@ const DrawingTool = ({ id }) => {
       />
       <fieldset>
         <legend>Edit Your Style</legend>
-        <button onClick={handleExportDrawingData}>Post Image</button>
-        <button onClick={handleExportImg}>Get Image</button>
+        <button onClick={handleExportDrawingData}>
+          Finish Drawing and go to Item
+        </button>
+        {/* <button onClick={handleExportImg}>Get Image</button>
         <button onClick={handleExportSVG}>Export SVG</button>
-        <button onClick={handleExportCanvas}>Export Canvas</button>
+        <button onClick={handleExportCanvas}>Export Canvas</button> */}
         {/* <button onClick={handleImportCanvas}>Load Existing Canvas</button> */}
         <button onClick={handleToggleMode}>{state.otherMode}</button>
         <button onClick={handleReset}>Reset</button>
@@ -162,7 +158,7 @@ const DrawingTool = ({ id }) => {
             value={state.bgrColor}
             onChange={handleBgrColor}
           />
-          <button onClick={selectBgrTransparent}>Transparent Background</button>
+          {/* <button onClick={selectBgrTransparent}>Transparent Background</button> */}
           <input
             type="range"
             name="penSize"
