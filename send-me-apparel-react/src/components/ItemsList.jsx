@@ -8,7 +8,7 @@ function ItemsList() {
   const [product, setProduct] = useState("");
   const [variants, setVariants] = useState([]);
   const [colors, setColors] = useState([]);
-  const [sizing, setSizing] = useState([]);
+  // const [sizing, setSizing] = useState([]);
   const [color_code, setColorCode] = useState([]);
   const [selectSize, setSelectSize] = useState("Army");
   const [gender, setGender] = useState("m");
@@ -59,7 +59,7 @@ function ItemsList() {
 
   useEffect(() => {
     createArrayFromVariants("color", setColors);
-    createArrayFromVariants("size", setSizing);
+    // createArrayFromVariants("size", setSizing);
     createArrayFromVariants("color_code", setColorCode);
   }, [variants]);
 
@@ -67,24 +67,25 @@ function ItemsList() {
     setUrl(url);
     fetchItems();
     createArrayFromVariants("color", setColors);
-    createArrayFromVariants("size", setSizing);
+    // createArrayFromVariants("size", setSizing);
   }
 
-  function selectAShirt(size, color) {
+  function selectAShirt(color) {
     const filteredVariant = variants.find(
-      (variant) => variant.size === size && variant.color === color
+      // ... => variant.size === size && ...
+      (variant) => variant.color === color
     );
     setFilteredTeeShirt(filteredVariant);
     // console.log(filteredTeeShirt.id)
   }
 
   useEffect(() => {
-    selectAShirt(selectSize, selectColor);
-  }, [selectSize, selectColor]);
+    selectAShirt(selectColor);
+  }, [selectColor]);
 
-  const handleSelectChange = (event) => {
-    setSelectSize(event.target.value);
-  };
+  // const handleSelectChange = (event) => {
+  //   setSelectSize(event.target.value);
+  // };
 
   const handleColorButtonClick = (color) => {
     setSelectColor(color);
@@ -119,14 +120,14 @@ function ItemsList() {
         Men
       </button>
 
-      <select value={selectSize} onChange={handleSelectChange}>
+      {/* <select value={selectSize} onChange={handleSelectChange}>
         <option value="">Select a Size</option>
         {sizing.map((size) => (
           <option key={size} value={size}>
             {size}
           </option>
         ))}
-      </select>
+      </select> */}
 
       <div style={{ display: "flex" }}>
         {colors.map((color, index) => (

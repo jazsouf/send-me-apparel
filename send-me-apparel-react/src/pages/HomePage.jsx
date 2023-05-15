@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import Create from "../components/Create";
 import DrawingList from "../components/DrawingList";
+import DrawingTool from "../components/DrawingTool";
 
 function HomePage() {
   return (
     <div>
       <Nav />
-      <Create />
-      <DrawingList />
+      <DrawingTool />
+      <DrawingList style={{ display: "flex", flexWrap: "wrap", gap: "1em" }} />
       <button>
         <Link to="/drawings">See all drawings</Link>
       </button>

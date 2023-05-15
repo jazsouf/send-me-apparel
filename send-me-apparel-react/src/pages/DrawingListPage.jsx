@@ -8,9 +8,6 @@ function DrawingListPage() {
     <div>
       <Nav />
       <DrawingList />
-      {/* <button>
-        <Link to="/">Create a design</Link>
-      </button> */}
     </div>
   );
 }

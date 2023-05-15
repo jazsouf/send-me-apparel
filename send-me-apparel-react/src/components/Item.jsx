@@ -10,7 +10,12 @@ function Item() {
   const [variants, setVariants] = useState("");
   const [item, setItem] = useState("");
   const [drawingImg, setDrawingImg] = useState("");
-
+  const [sizing, setSizing] = useState(["S", "M", "L", "XL", "2XL"]);
+  const [selectSize, setSelectSize] = useState("Army");
+  const [price, setPrice] = useState("");
+  const handleSelectChange = (event) => {
+    setSelectSize(event.target.value);
+  };
   function fetchItem() {
     axios
       .get(
@@ -19,14 +24,17 @@ function Item() {
           : "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
       )
       .then((response) => {
-        // console.log(response.data)
-        console.log(response);
+        console.log("item data", response.data);
+
+        // console.log(response);
         const { product, variants } =
           gender === "m"
             ? response.data.men.result
             : response.data.woman.result;
         setProduct(product);
         setVariants(variants);
+        console.log(variants);
+        setPrice(item.price);
         const itemObject = variants.find(
           (variant) => variant.id === Number(id)
         );
@@ -45,18 +53,23 @@ function Item() {
   useEffect(() => {
     fetchItem();
     fetchDrawing();
-    // displayFilteredItem();
   }, []);
 
   return (
-    // <>
-    //   <div>
-    //     <img src={item.image}></img>
-    //   </div>
-    //   <div>name: {item.name}</div>
-    //   <div>Size: {item.size}</div>
-    // </>
-    <CustomItem filteredTeeShirt={item} drawingImg={drawingImg} />
+    <>
+      <CustomItem filteredTeeShirt={item} drawingImg={drawingImg} />
+      <div>
+        <span>Price:</span> {price} <span>$</span>
+      </div>
+      <select value={selectSize} onChange={handleSelectChange}>
+        <option value="">Select a Size</option>
+        {sizing.map((size) => (
+          <option key={size} value={size}>
+            {size}
+          </option>
+        ))}
+      </select>
+    </>
   );
 }
 

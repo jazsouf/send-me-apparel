@@ -5,9 +5,10 @@ import Nav from "./Nav";
 
 function Create() {
   const params = useParams();
-  console.log("myiddd", params);
+
   return (
     <div>
+      <Nav />
       <DrawingTool {...params} />
     </div>
   );

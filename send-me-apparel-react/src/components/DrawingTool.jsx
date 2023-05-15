@@ -1,26 +1,24 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
 import { useNavigate } from "react-router-dom";
-import { paths } from "../assets/paths";
+
 import axios from "axios";
 
 const DrawingTool = ({ id }) => {
-  console.log(id);
+  console.log("drawing id", typeof id === "undefined");
   const initialState = {
     img: "",
     blob: "",
     svg: null,
     color: "#123456",
     bgrColor: "#FEDCBA",
-    penSize: 5,
-    eraserSize: 5,
-    eraserOn: false,
-    otherMode: "Eraser",
+    penSize: 10,
+    eraserSize: 10,
     saveWithBgr: true,
   };
-
   const [state, setState] = useState(initialState);
   const [drawingId, setDrawingId] = useState("");
+  const navigate = useNavigate();
 
   const canvas = useRef(null);
   const selectPenColor = (col) => {
@@ -54,32 +52,57 @@ const DrawingTool = ({ id }) => {
   const handleExportCanvas = () => {
     return canvas.current.exportPaths();
   };
-  const navigate = useNavigate();
-  const handleExportDrawingData = () => {
-    Promise.all([
-      handleExportCanvas(),
-      handleExportSVG(),
-      handleExportImg(),
-    ]).then((res) => {
-      console.log(res);
-      setState({ ...state, blob: res[0], svg: res[1], img: res[2] });
-      axios
-        .post("https://ironrest.fly.dev/api/send-me-apparel-drawings", {
-          blob: res[0],
-          svg: res[1],
-          img: res[2],
-        })
-        .then((response) => {
-          console.log(response.data.insertedId);
 
-          navigate(`/items/${response.data.insertedId}`);
-        })
-        .catch((error) => console.log(error));
-    });
+  const handleExportDrawingData = () => {
+    if (typeof id === "undefined") {
+      Promise.all([
+        handleExportCanvas(),
+        handleExportSVG(),
+        handleExportImg(),
+      ]).then((res) => {
+        console.log(res);
+        setState({ ...state, blob: res[0], svg: res[1], img: res[2] });
+        axios
+          .post("https://ironrest.fly.dev/api/send-me-apparel-drawings", {
+            blob: res[0],
+            svg: res[1],
+            img: res[2],
+          })
+          .then((response) => {
+            console.log(response.data.insertedId);
+
+            navigate(`/items/${response.data.insertedId}`);
+          })
+          .catch((error) => console.log(error));
+      });
+    } else {
+      Promise.all([
+        handleExportCanvas(),
+        handleExportSVG(),
+        handleExportImg(),
+      ]).then((res) => {
+        console.log(res);
+        setState({ ...state, blob: res[0], svg: res[1], img: res[2] });
+        axios
+          .patch(
+            `https://ironrest.fly.dev/api/send-me-apparel-drawings/${id}`,
+            {
+              blob: res[0],
+              svg: res[1],
+              img: res[2],
+            }
+          )
+          .then((response) => {
+            console.log(response.data.insertedId);
+
+            navigate(`/items/${id}`);
+          })
+          .catch((error) => console.log(error));
+      });
+    }
   };
 
   const handleImportCanvas = (id) => {
-    console.log("Im here");
     axios
       .get(`https://ironrest.fly.dev/api/send-me-apparel-drawings/${id}`)
       .then((res) => {
@@ -88,11 +111,12 @@ const DrawingTool = ({ id }) => {
       });
   };
 
-  const handleToggleMode = () => {
-    canvas.current.eraseMode(!state.eraserOn);
-    state.otherMode === "Eraser"
-      ? setState({ ...state, eraserOn: true, otherMode: "Brush" })
-      : setState({ ...state, eraserOn: false, otherMode: "Eraser" });
+  const handlePenMode = () => {
+    canvas.current.eraseMode(false);
+  };
+
+  const handleEraserMode = () => {
+    canvas.current.eraseMode(true);
   };
 
   const handleReset = () => {
@@ -131,13 +155,10 @@ const DrawingTool = ({ id }) => {
       <fieldset>
         <legend>Edit Your Style</legend>
         <button onClick={handleExportDrawingData}>
-          Finish Drawing and go to Item
+          Finish Drawing and go to select Item
         </button>
-        {/* <button onClick={handleExportImg}>Get Image</button>
-        <button onClick={handleExportSVG}>Export SVG</button>
-        <button onClick={handleExportCanvas}>Export Canvas</button> */}
-        {/* <button onClick={handleImportCanvas}>Load Existing Canvas</button> */}
-        <button onClick={handleToggleMode}>{state.otherMode}</button>
+        <button onClick={handlePenMode}>Select Brush</button>
+        <button onClick={handleEraserMode}>Select Eraser</button>
         <button onClick={handleReset}>Reset</button>
         <button onClick={handleRedo}>Redo</button>
         <button onClick={handleUndo}>Undo</button>
@@ -168,7 +189,7 @@ const DrawingTool = ({ id }) => {
             value={state.penSize}
             onChange={handlePenSize}
           />
-          <label htmlFor="penSize">{state.penSize}</label>
+          <label htmlFor="penSize">Brush: {state.penSize}</label>
           <input
             type="range"
             name="eraserSize"
@@ -178,7 +199,7 @@ const DrawingTool = ({ id }) => {
             value={state.eraserSize}
             onChange={handleEraserSize}
           />
-          <label htmlFor="eraserSize">{state.eraserSize}</label>
+          <label htmlFor="eraserSize">Eraser: {state.eraserSize}</label>
         </div>
       </fieldset>
       <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div>
