@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+
 
 function ItemsList() {
   const [product, setProduct] = useState("");
@@ -8,16 +10,29 @@ function ItemsList() {
   const [sizing, setSizing] = useState([]);
   const [color_code, setColorCode] = useState([]);
   const [selectSize, setSelectSize] = useState("Army");
+  const [gender, setGender] = useState("m");
   const [selectColor, setSelectColor] = useState("2XL");
-  const [url, setUrl] = useState("../src/m-tee-shirt.json");
+  const [url, setUrl] = useState("https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05");
   const [filteredTeeShirt, setFilteredTeeShirt] = useState(null);
 
   function fetchItems() {
     axios.get(url).then((response) => {
-      const { product, variants } = response.data.result;
-      console.log(response.data.result);
+      console.log(response.data._id)
+      if(response.data._id == "645e02be55e69e1b019f7f05"){
+      setGender('m')
+      const { product, variants } = response.data.men.result;
       setVariants(variants);
       setProduct(product);
+
+      }
+      else {
+      setGender('f')
+      const { product, variants } = response.data.woman.result;
+      setVariants(variants);
+      setProduct(product);
+
+      }
+      // console.log(response.data.men.result);
     });
   }
 
@@ -51,11 +66,13 @@ function ItemsList() {
       (variant) => variant.size === size && variant.color === color
     );
     setFilteredTeeShirt(filteredVariant);
+    // console.log(filteredTeeShirt.id)
   }
 
   useEffect(() => {
     selectAShirt(selectSize, selectColor);
   }, [selectSize, selectColor]);
+  
 
   const handleSelectChange = (event) => {
     setSelectSize(event.target.value);
@@ -75,7 +92,7 @@ function ItemsList() {
       }}
     >
       <button
-        onClick={() => displayItems("../src/f-tee-shirt.json")}
+        onClick={() => displayItems("https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06")}
         style={{
           backgroundColor: "white",
           border: "1px solid black",
@@ -84,7 +101,7 @@ function ItemsList() {
         Women
       </button>
       <button
-        onClick={() => displayItems("../src/m-tee-shirt.json")}
+        onClick={() => displayItems("https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05")}
         style={{
           backgroundColor: "white",
           border: "1px solid black",
@@ -130,6 +147,14 @@ function ItemsList() {
       )}
 
       {product.description}
+      {filteredTeeShirt && (
+      <button>
+      <Link to={"/cart/"+gender+"/"+filteredTeeShirt.id}>
+        Go to Cart
+      </Link>
+      </button>
+      )}
+
     </div>
   );
 }
