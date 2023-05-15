@@ -16,9 +16,9 @@ function App() {
         <Route path="/drawings/:id" element={<DrawingPage />} />
         <Route path="/edit/:id" element={<Create />} />
         {/*nested route*/}
-        <Route path="/items" element={<ItemsListPage />} />
+        <Route path="/items/:drawing" element={<ItemsListPage />} />
         <Route path="/items/:id" element={<ItemPage />} /> {/*nested route*/}
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/:gender/:id" element={<Cart />} />
       </Routes>
     </>
   );
