@@ -3,7 +3,7 @@ import { ReactSketchCanvas } from "react-sketch-canvas";
 import { paths } from "../assets/paths";
 import axios from "axios";
 
-const Drawing = () => {
+const Drawing = ({getDrawingId}) => {
   const initialState = {
     imagePath: "",
     canvasPath: "",
@@ -78,7 +78,7 @@ const Drawing = () => {
           blob: res[0],
         })
         .then((response) => {
-          console.log(response);
+          getDrawingId(response.data.insertedId);
         })
         .catch((error) => console.log(error));
     });
