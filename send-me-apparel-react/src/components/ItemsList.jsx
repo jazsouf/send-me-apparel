@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import CustomItem from "./CustomItem";
 
 function ItemsList() {
   const params = useParams();
@@ -105,10 +106,6 @@ function ItemsList() {
             "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
           )
         }
-        style={{
-          backgroundColor: "white",
-          border: "1px solid black",
-        }}
       >
         Women
       </button>
@@ -118,10 +115,6 @@ function ItemsList() {
             "https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05"
           )
         }
-        style={{
-          backgroundColor: "white",
-          border: "1px solid black",
-        }}
       >
         Men
       </button>
@@ -151,8 +144,7 @@ function ItemsList() {
           ></button>
         ))}
       </div>
-
-      {filteredTeeShirt && (
+      {/* {filteredTeeShirt && (
         <>
           <div
             className="customWrapper"
@@ -176,12 +168,24 @@ function ItemsList() {
           <div>name: {filteredTeeShirt.name}</div>
           <div>Size: {filteredTeeShirt.size}</div>
         </>
-      )}
-
+      )} */}
+      <CustomItem filteredTeeShirt={filteredTeeShirt} drawingImg={drawingImg} />
+      <button>
+        <Link to={`/edit/${params.drawing}`}>Edit Drawing</Link>
+      </button>
       {product.description}
       {filteredTeeShirt && (
         <button>
-          <Link to={"/cart/" + gender + "/" + filteredTeeShirt.id}>
+          <Link
+            to={
+              "/cart/" +
+              gender +
+              "/" +
+              filteredTeeShirt.id +
+              "/" +
+              params.drawing
+            }
+          >
             Go to Cart
           </Link>
         </button>
