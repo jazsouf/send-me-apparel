@@ -22,7 +22,7 @@ function Cart() {
         const { product, variants } =
           gender === "m"
             ? response.data.men.result
-            : response.data.women.result;
+            : response.data.woman.result;
         setProduct(product);
         setVariants(variants);
         const itemObject = variants.find(
