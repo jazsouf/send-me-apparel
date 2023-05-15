@@ -178,7 +178,7 @@ function ItemsList() {
         <button>
           <Link
             to={
-              "/cart/" +
+              "/item/" +
               gender +
               "/" +
               filteredTeeShirt.id +
@@ -186,7 +186,7 @@ function ItemsList() {
               params.drawing
             }
           >
-            Go to Cart
+            Go to Item
           </Link>
         </button>
       )}

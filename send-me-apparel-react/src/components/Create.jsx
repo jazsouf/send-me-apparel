@@ -8,7 +8,6 @@ function Create() {
   console.log("myiddd", params);
   return (
     <div>
-      <Nav />
       <DrawingTool {...params} />
     </div>
   );

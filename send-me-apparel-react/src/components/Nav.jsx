@@ -6,16 +6,10 @@ function Nav() {
     <div>
       <ul>
         <li>
-          <Link to="/">Draw and Create</Link>
+          <Link to="/">Send Me Apparel</Link>
         </li>
         <li>
-          <Link to="/drawings">Browse Drawings</Link>
-        </li>
-        <li>
-          <Link to="/items">Select Product</Link>
-        </li>
-        <li>
-          <Link to="/cart">Customize Your Product</Link>
+          <Link to="/cart">Shop Cart</Link>
         </li>
       </ul>
     </div>
