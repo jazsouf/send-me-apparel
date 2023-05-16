@@ -7,6 +7,7 @@ import ItemsListPage from "./pages/ItemsListPage";
 import ItemPage from "./pages/ItemPage";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/items/:id" element={<ItemPage />} /> {/*nested route*/}
         <Route path="/item/:gender/:id/:drawing" element={<ItemPage />} />
         <Route path="/cart" element={<CartPage />}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
