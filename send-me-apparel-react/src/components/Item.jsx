@@ -97,7 +97,11 @@ function Item() {
             <h1>Select Size & Quantity</h1>
             <div className="separator"></div>
             <div className="input-wrapper">
-              <select value={selectSize} onChange={handleSelectChange}>
+              <select
+                id="size-select"
+                value={selectSize}
+                onChange={handleSelectChange}
+              >
                 <option value="">Select Size</option>
                 {sizing.map((size) => (
                   <option key={size} value={size}>
@@ -108,6 +112,7 @@ function Item() {
               <div>
                 <label htmlFor="qte">Quantity</label>
                 <input
+                  id="input-qte"
                   placeholder="quantity"
                   type="number"
                   min="1"

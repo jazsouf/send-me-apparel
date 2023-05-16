@@ -1,72 +1,81 @@
 .item-wrapper {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    width: 100vw;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .item-wrapper > * {
-    flex: 1
+  flex: 1;
 }
 
 .item-wrapper {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .item-img {
-    background-color: white; 
-    position: relative;
+  background-color: white;
+  position: relative;
 }
 
 .item-img button {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white !important;
-    color: black !important;
-    border: 1px solid black !important;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
 }
 
 .input-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+#size-select {
+  text-align: center;
+}
+
+#input-qte {
+  margin-left: 1ch;
+  width: 4ch;
+  text-align: center;
 }
 
 .item-selector .separator {
-    width: 100%;
-    margin-bottom: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .item-selector {
-    padding: 2rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .item-selector > * {
-    flex: 1;
+  flex: 1;
 }
 
 .item-selector > *:last-child {
-    flex: 0.1
+  flex: 0.1;
 }
 
 .gender-wrapper {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-wrapper button {
-    font-size: 1.5rem !important;
-    border-radius: 1.5rem;
-    background-color: black;
+  font-size: 1.5rem !important;
+  border-radius: 1.5rem;
+  background-color: black;
 }
