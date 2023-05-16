@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CustomItem from "./CustomItem";
-
+import "./cart.css";
 const Cart = () => {
   const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
   const [cart, setCart] = useState(localCart);
@@ -27,7 +27,7 @@ const Cart = () => {
   }
   return (
     <>
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th>Product</th>
@@ -37,44 +37,55 @@ const Cart = () => {
             <th>Total</th>
             <th>Remove item</th>
           </tr>
-        </thead>
-        <tbody className="cartBody">
+        </thead> */}
+      <div className="cart-wrapper">
+        <div className="cartBody">
+          <div>
+            <h1>Shopping Cart</h1>
+            <h3>You've 3 Items</h3>
+          </div>
           {localCart.length > 0 &&
             localCart.map(({ item, drawingImg, qte, selectSize }, i) => {
               return (
-                <tr key={i}>
-                  <td>
+                <div className="cart-el" key={i}>
+                  <div className="image-wrapper">
                     <CustomItem
                       filteredTeeShirt={item}
                       drawingImg={drawingImg}
                     />
-                  </td>
-                  <td>{selectSize}</td>
-                  <td>{qte}</td>
-                  <td>{item.price}</td>
-                  <td>
-                    {Math.round(Number(qte) * Number(item.price) * 100) / 100}
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => {
-                        handleRemoveItem(i);
-                      }}
-                    >
-                      Remove
-                    </button>
-                  </td>
-                </tr>
+                  </div>
+                  <div className="el-details">
+                    <div className="size">Size: {selectSize}</div>
+                    <div className="quantity">Quantity: {qte}</div>
+                    <div className="item-price">${item.price}</div>
+                    <div className="item-total">
+                      Total:
+                      {Math.round(Number(qte) * Number(item.price) * 100) / 100}
+                      $
+                    </div>
+                    <div className="remove-button-wrapper">
+                      <button
+                        onClick={() => {
+                          handleRemoveItem(i);
+                        }}
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </div>
+                </div>
               );
             })}
-        </tbody>
-      </table>
-      <button onClick={handleClear}>Clear Cart</button>
-      <button>
-        <Link to="/">Another One</Link>
-      </button>
-      <div>
-        <strong>Total {getTotal()}</strong>{" "}
+        </div>
+      </div>
+      <div class="floating-cart">
+        <button onClick={handleClear}>Clear Cart</button>
+        <button>
+          <Link to="/">Add another Item</Link>
+        </button>
+        <div>
+          <strong>Total {getTotal()}$</strong>{" "}
+        </div>
       </div>
     </>
   );

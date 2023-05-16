@@ -9,7 +9,7 @@ function Nav() {
 
           <Link to="/"><img src={logo}></img></Link>
 
-        <div class="counter-wrapper">
+        <div className="counter-wrapper">
           <Link to="/cart"><span >0</span></Link>
         </div>
 
