@@ -32,20 +32,18 @@ function DrawingList() {
     return <div>🤑</div>;
   }
   return (
-    <ul>
+    <div class="drawings-wrapper">
       {drawingListArr.map((drawing) => {
         return (
-          <li key={drawing._id}>
+          <div key={drawing._id}>
             <Link to={`/drawings/${drawing._id}`}>
               <div>{drawing.imagePath !== "" && <img src={drawing.img} />}</div>
             </Link>
-            <button onClick={() => handleDelete(drawing._id)}>
-              Detele Permanently
-            </button>
-          </li>
+            <button onClick={() => handleDelete(drawing._id)}>×</button>
+          </div>
         );
       })}
-    </ul>
+    </div>
   );
 }
 

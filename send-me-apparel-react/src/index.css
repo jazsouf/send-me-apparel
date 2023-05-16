@@ -9,6 +9,35 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+header {
+  position: fixed;
+  z-index: 100000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+header a {
+  pointer-events: all !important;
+}
+
+header img {
+  height: 4rem;
+}
+
+header .counter-wrapper span {
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+}
 body {
   font-family: sans-serif;
   margin: 0;
@@ -43,7 +72,7 @@ textarea {
 }
 
 button {
-  background-color: #000088;
+  background-color: inherit;
   color: #ffffff;
   border: none;
   padding: 0.25em 1em;
@@ -51,7 +80,7 @@ button {
 }
 
 button:hover {
-  background-color: #0000cc;
+  /* background-color: #0000cc; */
 }
 
 ul {

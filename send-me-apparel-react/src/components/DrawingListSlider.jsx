@@ -61,11 +61,11 @@ function DrawingList() {
             </div>
           );
         })}
-        {/* <div className="button-wrapper">
+        <div className="button-wrapper">
           <button>
             <Link to="/drawings">See all drawings</Link>
           </button>
-        </div> */}
+        </div>
       </div>
     )
   );
