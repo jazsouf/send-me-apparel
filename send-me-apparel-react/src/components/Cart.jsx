@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CustomItem from "./CustomItem";
 
-const Cart = () => {
+const Cart = ({ setTotalItems }) => {
   const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
   const [cart, setCart] = useState(localCart);
+
   let total = 0;
+  useEffect(() => {
+    console.log("setItem", setTotalItems);
+    setTotalItems(cart.length);
+  }, [cart]);
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart")));
   }, [localStorage.cart]);
@@ -16,7 +21,7 @@ const Cart = () => {
   }
   function getTotal() {
     localCart.map(({ item, drawingImg, qte, selectSize }) => {
-      total += Math.round(Number(qte) * Number(item.price) * 100) / 100;
+      total = total + Math.round(Number(qte) * Number(item.price) * 100) / 100;
     });
     return total;
   }
@@ -74,7 +79,7 @@ const Cart = () => {
         <Link to="/">Another One</Link>
       </button>
       <div>
-        <strong>Total {getTotal()}</strong>{" "}
+        <strong>Total {Math.round(getTotal() * 100) / 100}</strong>{" "}
       </div>
     </>
   );
