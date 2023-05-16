@@ -17,7 +17,7 @@ const DrawingTool = ({ id }) => {
     svg: null,
     color: "#123456",
     bgrColor: "#FFFFFF",
-    toolSize: 10,
+    toolSize: 12,
     saveWithBgr: true,
     isPenActive: true,
     isEraserActive: false,
@@ -169,7 +169,7 @@ const DrawingTool = ({ id }) => {
       <div className="navWrapper">
         <div className="floating-navigation">
           <button
-            className={state.isPenActive ? `active` : undefined}
+            className={`no-hover ${state.isPenActive ? "active" : undefined}`}
             onClick={handlePenMode}
           >
             <svg
@@ -194,7 +194,9 @@ const DrawingTool = ({ id }) => {
             </svg>
           </button>
           <button
-            className={state.isEraserActive ? `active` : undefined}
+            className={`no-hover ${
+              state.isEraserActive ? "active" : undefined
+            }`}
             onClick={handleEraserMode}
           >
             <img src={eraser} alt="" />
@@ -235,14 +237,14 @@ const DrawingTool = ({ id }) => {
             >
               <input
                 type="range"
-                name="penSize"
-                id="penSize"
-                min="0"
-                max="42"
+                name="toolSize"
+                id="toolSize"
+                min="1"
+                max="50"
                 value={state.toolSize}
                 onChange={handleToolSize}
               />
-              <label htmlFor="penSize">{state.toolSize}</label>
+              <label htmlFor="toolSize">{state.toolSize}</label>
             </div>
           </div>
         </div>

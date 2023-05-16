@@ -1,34 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CustomItem from "./CustomItem";
-
 import "./cart.css";
 
-
-
-const Cart = ({ setTotalItems }) => {
-
+const Cart = ({ totalItemsCb }) => {
   const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
   const [cart, setCart] = useState(localCart);
 
   let total = 0;
   useEffect(() => {
-    console.log("setItem", setTotalItems);
-    setTotalItems(cart.length);
-  }, [cart]);
-  useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart")));
   }, [localStorage.cart]);
+  useEffect(() => {
+    totalItemsCb(cart ? cart.length : 0);
+  }, [cart]);
   function handleClear() {
     console.log("clearing");
-    setCart([]);
-    window.localStorage.clear();
+    localStorage.clear();
+    console.log(localCart);
+    console.log(cart);
   }
   function getTotal() {
     localCart.map(({ item, drawingImg, qte, selectSize }) => {
       total = total + Math.round(Number(qte) * Number(item.price) * 100) / 100;
     });
-    return total;
+    return Math.round(total * 100) / 100;
   }
   function handleRemoveItem(i) {
     const filteredCart = cart.filter((item) => cart.indexOf(item) !== i);
@@ -37,22 +33,11 @@ const Cart = ({ setTotalItems }) => {
   }
   return (
     <>
-      {/* <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Size</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th>Remove item</th>
-          </tr>
-        </thead> */}
       <div className="cart-wrapper">
         <div className="cartBody">
           <div>
             <h1>Shopping Cart</h1>
-            <h3>You've 3 Items</h3>
+            <h3>You have {cart ? cart.length : 0} items</h3>
           </div>
           {localCart.length > 0 &&
             localCart.map(({ item, drawingImg, qte, selectSize }, i) => {
@@ -66,12 +51,11 @@ const Cart = ({ setTotalItems }) => {
                   </div>
                   <div className="el-details">
                     <div className="size">Size: {selectSize}</div>
-                    <div className="quantity">Quantity: {qte}</div>
-                    <div className="item-price">${item.price}</div>
+                    <div className="quantity">Units: {qte}</div>
+                    <div className="item-price">Price: ${item.price}</div>
                     <div className="item-total">
-                      Total:
+                      Subtotal: $
                       {Math.round(Number(qte) * Number(item.price) * 100) / 100}
-                      $
                     </div>
                     <div className="remove-button-wrapper">
                       <button
@@ -86,18 +70,19 @@ const Cart = ({ setTotalItems }) => {
                 </div>
               );
             })}
-
         </div>
       </div>
-      <div class="floating-cart">
+      <div className="floating-cart">
         <button onClick={handleClear}>Clear Cart</button>
-        <button>
-          <Link to="/">Add another Item</Link>
-        </button>
+        <Link to="/">
+          <button>Add another Item</button>
+        </Link>
+        <Link to="/checkout">
+          <button>Checkout</button>
+        </Link>
         <div>
-          <strong>Total {getTotal()}$</strong>{" "}
+          <strong>Total ${getTotal()}</strong>
         </div>
-
       </div>
     </>
   );

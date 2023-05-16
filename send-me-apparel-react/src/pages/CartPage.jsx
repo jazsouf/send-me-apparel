@@ -4,14 +4,14 @@ import Cart from "../components/Cart";
 useState;
 function CartPage() {
   const [totalItems, setTotalItems] = useState(0);
-  function totalItemCb(num) {
+  function totalItemsCb(num) {
     setTotalItems(num);
   }
 
   return (
     <div>
       <Nav totalItems={totalItems} />
-      <Cart setTotalItems={totalItemCb} />
+      <Cart totalItemsCb={totalItemsCb} />
     </div>
   );
 }
