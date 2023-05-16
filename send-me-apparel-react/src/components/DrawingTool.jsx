@@ -109,6 +109,7 @@ const DrawingTool = ({ id }) => {
       .get(`https://ironrest.fly.dev/api/send-me-apparel-drawings/${id}`)
       .then((res) => {
         console.log(res);
+        canvas.current.clearCanvas();
         canvas.current.loadPaths(res.data.blob);
       });
   };
@@ -251,6 +252,7 @@ const DrawingTool = ({ id }) => {
         <div className="buttons-nav">
           <button onClick={handleUndo}>Undo</button>
           <button onClick={handleRedo}>Redo</button>
+
         </div>
       </div>
       {/* <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div> */}

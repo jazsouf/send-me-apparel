@@ -35,8 +35,10 @@ function DrawingList() {
     <div class="drawings-wrapper">
       {drawingListArr.map((drawing) => {
         return (
+
           <div key={drawing._id}>
-            <Link to={`/drawings/${drawing._id}`}>
+            <Link to={`/edit/${drawing._id}`}>
+
               <div>{drawing.imagePath !== "" && <img src={drawing.img} />}</div>
             </Link>
             <button onClick={() => handleDelete(drawing._id)}>×</button>

@@ -46,11 +46,8 @@ function DrawingList() {
       <div className="drawing-slider">
         {drawingListArr.map((drawing, index) => {
           return (
-            <div
-              className={`image-container`}
-              key={drawing._id}
-            >
-              <Link to={`/drawings/${drawing._id}`}>
+            <div className={`image-container`} key={drawing._id}>
+              <Link to={`/edit/${drawing._id}`}>
                 <div>
                   {drawing.imagePath !== "" && <img src={drawing.img} />}
                 </div>
