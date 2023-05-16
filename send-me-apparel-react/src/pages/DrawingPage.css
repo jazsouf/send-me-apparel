@@ -69,10 +69,16 @@ fieldset {
     height: 100%;
 }
 
+.image-container a > div {
+}
+
 .image-container img {
     width: 15vh;
+    border: 1px solid black; 
     border-radius: 0.5rem;
 }
+
+
 
 .floating-navigation {
     background-color: black;

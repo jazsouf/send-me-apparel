@@ -85,37 +85,55 @@ function Item() {
   }
   return (
     <>
-      <CustomItem filteredTeeShirt={item} drawingImg={drawingImg} />
-      <div>
-        <strong className="test">Product</strong>{" "}
-        {name && name.substring(0, name.indexOf("("))}
+      <div className="item-wrapper">
+        <div className="item-img">
+          <CustomItem filteredTeeShirt={item} drawingImg={drawingImg} />
+        </div>
+        <div className="item-selector">
+          <div className="gender">
+            <h1>
+              <strong className="test">Product</strong>{" "}
+              {name && name.substring(0, name.indexOf("("))}—{price && price}
+              <span>$</span>
+            </h1>
+            <div className="separator"></div>
+            {product.description}
+          </div>
+          <div className="colors-wrapper sizing">
+            <h1>Select Size & Quantity</h1>
+            <div className="separator"></div>
+            <div className="input-wrapper">
+              <select value={selectSize} onChange={handleSelectChange}>
+                <option value="">Select Size</option>
+                {sizing.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+              <div>
+                <label htmlFor="qte">Quantity</label>
+                <input
+                  placeholder="quantity"
+                  type="number"
+                  min="1"
+                  value={qte}
+                  onChange={handleQte}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="buttons-wrapper">
+          
+            <button className="outline">
+              <Link to={`/items/${drawing}`}>Back to item selection</Link>
+            </button>
+            <button onClick={handleAddToCart}>
+              <Link to="/cart">Add to cart</Link>
+            </button>
+          </div>
+        </div>
       </div>
-      <div>
-        <strong>Price</strong> {price && price}
-        <span>$</span>
-      </div>
-      <select value={selectSize} onChange={handleSelectChange}>
-        <option value="">Select Size</option>
-        {sizing.map((size) => (
-          <option key={size} value={size}>
-            {size}
-          </option>
-        ))}
-      </select>
-      <label htmlFor="qte">Quantity</label>
-      <input
-        placeholder="quantity"
-        type="number"
-        min="1"
-        value={qte}
-        onChange={handleQte}
-      />
-      <button onClick={handleAddToCart}>
-        <Link to="/cart">Add to cart</Link>
-      </button>
-      <button>
-        <Link to={`/items/${drawing}`}>Back to item selection</Link>
-      </button>
     </>
   );
 }

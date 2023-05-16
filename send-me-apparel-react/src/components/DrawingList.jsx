@@ -32,7 +32,7 @@ function DrawingList() {
     return <div>🤑</div>;
   }
   return (
-    <div class="drawings-wrapper">
+    <div className="drawings-wrapper">
       {drawingListArr.map((drawing) => {
         return (
 

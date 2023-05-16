@@ -114,7 +114,7 @@ function ItemsList() {
           <div className="gender">
             <h1>Gender Selection</h1>
             <div className="separator"></div>
-            <div class="gender-wrapper">
+            <div className="gender-wrapper">
               <button
                 onClick={() =>
                   displayItems(
