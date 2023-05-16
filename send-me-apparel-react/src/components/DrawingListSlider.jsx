@@ -26,7 +26,7 @@ function DrawingList() {
   }, []);
 
   if (drawingListArr.lenght === 0) {
-    return <div>🤑</div>;
+    return <div style={{ width: "50" }}>🤑</div>;
   }
 
   return (
@@ -44,9 +44,9 @@ function DrawingList() {
           );
         })}
         <div className="button-wrapper">
-          <button>
-            <Link to="/drawings">See all drawings</Link>
-          </button>
+          <Link to="/drawings">
+            <button>See all drawings</button>
+          </Link>
         </div>
       </div>
     )

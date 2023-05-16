@@ -46,8 +46,6 @@ function ItemsList() {
           variants.find((variant) => variant.color === "White")
         );
       }
-
-      // console.log(response.data.men.result);
     });
   }
 
@@ -106,13 +104,13 @@ function ItemsList() {
             drawingImg={drawingImg}
             default={selectAShirt}
           />
-          <button>
-            <Link to={`/edit/${params.drawing}`}>Edit Drawing</Link>
-          </button>
+          <Link to={`/edit/${params.drawing}`}>
+            <button>Edit Drawing</button>
+          </Link>
         </div>
         <div className="item-selector">
           <div className="gender">
-            <h1>Gender Selection</h1>
+            <h1>Item Selection</h1>
             <div className="separator"></div>
             <div className="gender-wrapper">
               <button
@@ -122,7 +120,7 @@ function ItemsList() {
                   )
                 }
               >
-                Women
+                T-Shirt W
               </button>
               <button
                 onClick={() =>
@@ -131,7 +129,7 @@ function ItemsList() {
                   )
                 }
               >
-                Men
+                T-Shirt M
               </button>
             </div>
           </div>
@@ -155,23 +153,19 @@ function ItemsList() {
             ))}
           </div>
 
-          {/* {product.description} */}
-
           {filteredTeeShirt && (
-            <button>
-              <Link
-                to={
-                  "/item/" +
-                  gender +
-                  "/" +
-                  filteredTeeShirt.id +
-                  "/" +
-                  params.drawing
-                }
-              >
-                Validate Item
-              </Link>
-            </button>
+            <Link
+              to={
+                "/item/" +
+                gender +
+                "/" +
+                filteredTeeShirt.id +
+                "/" +
+                params.drawing
+              }
+            >
+              <button>Validate Item</button>
+            </Link>
           )}
         </div>
       </div>

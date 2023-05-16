@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -76,7 +75,7 @@ a {
 }
 
 a:hover {
-  color: #0000cc;
+  /* color: #0000cc; */
 }
 
 input,
@@ -95,7 +94,11 @@ button {
 }
 
 button:hover {
-  /* background-color: #0000cc; */
+  background-color: #0000cc;
+}
+
+.no-hover:hover {
+  background-color: inherit;
 }
 
 ul {

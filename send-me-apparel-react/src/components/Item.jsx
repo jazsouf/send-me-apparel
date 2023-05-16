@@ -29,7 +29,6 @@ function Item() {
   const handleSelectChange = (event) => {
     setSelectSize(event.target.value);
     item.size = event.target.value;
-    // console.log(item);
   };
   function fetchItem() {
     axios
@@ -39,20 +38,17 @@ function Item() {
           : "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
       )
       .then((response) => {
-        // console.log("item data", response.data);
-
-        // console.log(response);
         const { product, variants } =
           gender === "m"
             ? response.data.men.result
             : response.data.woman.result;
         setProduct(product);
         setVariants(variants);
-        // console.log(variants);
+
         const itemObject = variants.find(
           (variant) => variant.id === Number(id)
         );
-        // console.log("itemObj", itemObject);
+
         setItem(itemObject);
         setPrice(item.price);
         setName(item.name);
@@ -77,11 +73,9 @@ function Item() {
   }, [isFetched]);
 
   function handleAddToCart() {
-    // const localCart = JSON.parse(localStorage.getItem("items") || "[]");
     const itemToAdd = { item, drawingImg, qte, selectSize };
     const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
     localStorage.setItem("cart", JSON.stringify([...localCart, itemToAdd]));
-    // console.log("item", [itemToAdd]);
   }
   return (
     <>
@@ -103,7 +97,11 @@ function Item() {
             <h1>Select Size & Quantity</h1>
             <div className="separator"></div>
             <div className="input-wrapper">
-              <select value={selectSize} onChange={handleSelectChange}>
+              <select
+                id="size-select"
+                value={selectSize}
+                onChange={handleSelectChange}
+              >
                 <option value="">Select Size</option>
                 {sizing.map((size) => (
                   <option key={size} value={size}>
@@ -114,6 +112,7 @@ function Item() {
               <div>
                 <label htmlFor="qte">Quantity</label>
                 <input
+                  id="input-qte"
                   placeholder="quantity"
                   type="number"
                   min="1"
@@ -124,13 +123,12 @@ function Item() {
             </div>
           </div>
           <div className="buttons-wrapper">
-          
-            <button className="outline">
-              <Link to={`/items/${drawing}`}>Back to item selection</Link>
-            </button>
-            <button onClick={handleAddToCart}>
-              <Link to="/cart">Add to cart</Link>
-            </button>
+            <Link to={`/items/${drawing}`}>
+              <button className="outline">Back to item selection</button>
+            </Link>
+            <Link to="/cart">
+              <button onClick={handleAddToCart}>Add to cart</button>
+            </Link>
           </div>
         </div>
       </div>
