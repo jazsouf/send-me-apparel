@@ -10,10 +10,12 @@ function Create() {
   return (
     <div>
       <Nav />
-      <DrawingTool {...params} />
-      <DrawingListSlider
-        style={{ display: "flex", flexWrap: "wrap", gap: "1em" }}
-      />
+      <div className="drawing-main-wrapper">
+        <DrawingTool {...params} />
+        <DrawingListSlider
+          style={{ display: "flex", flexWrap: "wrap", gap: "1em" }}
+        />
+      </div>
     </div>
   );
 }

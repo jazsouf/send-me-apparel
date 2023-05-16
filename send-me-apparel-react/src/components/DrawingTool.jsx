@@ -9,7 +9,8 @@ import strokeWidth from "../assets/stroke-width.svg";
 import axios from "axios";
 
 const DrawingTool = ({ id }) => {
-  console.log("drawing id", typeof id === "undefined");
+  console.log("drawing id", id);
+  const navigate = useNavigate();
   const initialState = {
     img: "",
     blob: "",
@@ -23,8 +24,6 @@ const DrawingTool = ({ id }) => {
     isInputSizeActive: false,
   };
   const [state, setState] = useState(initialState);
-  const [drawingId, setDrawingId] = useState("");
-  const navigate = useNavigate();
 
   const canvas = useRef(null);
   const selectPenColor = (col) => {
@@ -35,10 +34,6 @@ const DrawingTool = ({ id }) => {
     setState({ ...state, bgrColor: col });
   };
 
-  const selectBgrTransparent = () => {
-    setState({ ...state, bgrColor: "#00000000" });
-  };
-
   const selectToolSize = (size) => {
     setState({ ...state, toolSize: size });
   };
@@ -46,11 +41,9 @@ const DrawingTool = ({ id }) => {
   const handleExportImg = () => {
     return canvas.current.exportImage("png");
   };
-
   const handleExportSVG = () => {
     return canvas.current.exportSvg();
   };
-
   const handleExportCanvas = () => {
     return canvas.current.exportPaths();
   };
@@ -69,6 +62,7 @@ const DrawingTool = ({ id }) => {
             blob: res[0],
             svg: res[1],
             img: res[2],
+            bgrColor: state.bgrColor,
           })
           .then((response) => {
             console.log(response.data.insertedId);
@@ -104,36 +98,25 @@ const DrawingTool = ({ id }) => {
     }
   };
 
-  const handleImportCanvas = (id) => {
-    axios
-      .get(`https://ironrest.fly.dev/api/send-me-apparel-drawings/${id}`)
-      .then((res) => {
-        console.log(res);
-        canvas.current.clearCanvas();
-        canvas.current.loadPaths(res.data.blob);
-      });
-  };
-
   const handlePenMode = () => {
-    canvas.current.eraseMode(false);
     setState({ ...state, isPenActive: true, isEraserActive: false });
+    canvas.current.eraseMode(false);
   };
 
   const handleEraserMode = () => {
-    canvas.current.eraseMode(true);
     setState({ ...state, isPenActive: false, isEraserActive: true });
+    canvas.current.eraseMode(true);
   };
 
   const handleReset = () => {
     setState(initialState);
+    canvas.current.clearCanvas();
     canvas.current.eraseMode(false);
-    canvas.current.resetCanvas();
   };
 
   const handleRedo = () => {
     canvas.current.redo();
   };
-
   const handleUndo = () => {
     canvas.current.undo();
   };
@@ -145,8 +128,21 @@ const DrawingTool = ({ id }) => {
   const handlePenColor = (e) => selectPenColor(e.target.value);
   const handleBgrColor = (e) => selectBgrColor(e.target.value);
   const handleToolSize = (e) => selectToolSize(e.target.value);
-  const handleEraserSize = (e) => selectEraserSize(e.target.value);
-  id && handleImportCanvas(id);
+
+  const handleImportCanvas = (id) => {
+    axios
+      .get(`https://ironrest.fly.dev/api/send-me-apparel-drawings/${id}`)
+      .then((res) => {
+        console.log(res);
+        canvas.current.clearCanvas();
+        canvas.current.loadPaths(res.data.blob);
+      })
+      .catch((error) => console.log(error));
+  };
+  useEffect(() => {
+    id && handleImportCanvas(id);
+  }, [id]);
+
   return (
     <div className="drawing-tool">
       <div className="canvas-wrapper">
@@ -173,7 +169,7 @@ const DrawingTool = ({ id }) => {
       <div className="navWrapper">
         <div className="floating-navigation">
           <button
-            className={state.isPenActive && `active`}
+            className={state.isPenActive ? `active` : undefined}
             onClick={handlePenMode}
           >
             <svg
@@ -184,8 +180,8 @@ const DrawingTool = ({ id }) => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M9.80769 0H0V25H9.80769H13.7308H86.3077V15H86.3078V25C88.77 21.055 92.4936 17.6245 96.7549 16H102V15V9H96.7548C92.4936 7.37555 88.77 3.94502 86.3078 0V10H86.3077V0H13.7308H9.80769Z"
                 fill="white"
               />
@@ -198,7 +194,7 @@ const DrawingTool = ({ id }) => {
             </svg>
           </button>
           <button
-            className={state.isEraserActive && `active`}
+            className={state.isEraserActive ? `active` : undefined}
             onClick={handleEraserMode}
           >
             <img src={eraser} alt="" />
@@ -224,17 +220,18 @@ const DrawingTool = ({ id }) => {
               value={state.bgrColor}
               onChange={handleBgrColor}
             />
-            {/* <button onClick={selectBgrTransparent}>Transparent Background</button> */}
             <div
               className={`strokeWidth ${
-                state.isInputSizeActive ? "active" : ""
+                state.isInputSizeActive ? "active" : undefined
               }`}
               onClick={handleInputSize}
             >
               <img src={strokeWidth}></img>
             </div>
             <div
-              className={`inputSize ${state.isInputSizeActive ? "active" : ""}`}
+              className={`inputSize ${
+                state.isInputSizeActive ? "active" : undefined
+              }`}
             >
               <input
                 type="range"
@@ -252,10 +249,8 @@ const DrawingTool = ({ id }) => {
         <div className="buttons-nav">
           <button onClick={handleUndo}>Undo</button>
           <button onClick={handleRedo}>Redo</button>
-
         </div>
       </div>
-      {/* <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div> */}
     </div>
   );
 };
