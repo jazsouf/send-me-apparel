@@ -5,8 +5,8 @@ import DrawingListPage from "./pages/DrawingListPage";
 import DrawingPage from "./pages/DrawingPage";
 import ItemsListPage from "./pages/ItemsListPage";
 import ItemPage from "./pages/ItemPage";
-import Item from "./components/Item";
 import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/items/:drawing" element={<ItemsListPage />} />
         <Route path="/items/:id" element={<ItemPage />} /> {/*nested route*/}
         <Route path="/item/:gender/:id/:drawing" element={<ItemPage />} />
+        <Route path="/cart" element={<CartPage />}></Route>
       </Routes>
     </>
   );
