@@ -107,6 +107,7 @@ const DrawingTool = ({ id }) => {
       .get(`https://ironrest.fly.dev/api/send-me-apparel-drawings/${id}`)
       .then((res) => {
         console.log(res);
+        canvas.current.clearCanvas();
         canvas.current.loadPaths(res.data.blob);
       });
   };
@@ -168,10 +169,16 @@ const DrawingTool = ({ id }) => {
         </button>
       </div>
       <div className="floating-navigation">
-        <button className={state.isPenActive && `active`} onClick={handlePenMode}>
+        <button
+          className={state.isPenActive && `active`}
+          onClick={handlePenMode}
+        >
           <img src={pen} alt="" />
         </button>
-        <button className={state.isEraserActive && `active`} onClick={handleEraserMode}>
+        <button
+          className={state.isEraserActive && `active`}
+          onClick={handleEraserMode}
+        >
           <img src={eraser} alt="" />
         </button>
         <div>

@@ -13,8 +13,16 @@ function Item() {
   const [item, setItem] = useState("");
   const [isFetched, setIsFetched] = useState(false);
   const [drawingImg, setDrawingImg] = useState("");
-  const [sizing, setSizing] = useState(["S", "M", "L", "XL", "2XL"]);
-  const [selectSize, setSelectSize] = useState("");
+  const [sizing, setSizing] = useState([
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
+  ]);
+  const [selectSize, setSelectSize] = useState("M");
   const [price, setPrice] = useState("");
   const [name, setName] = useState("");
   const [qte, setQte] = useState(1);
@@ -40,7 +48,7 @@ function Item() {
             : response.data.woman.result;
         setProduct(product);
         setVariants(variants);
-        console.log(variants);
+        // console.log(variants);
         const itemObject = variants.find(
           (variant) => variant.id === Number(id)
         );
@@ -48,7 +56,7 @@ function Item() {
         setItem(itemObject);
         setPrice(item.price);
         setName(item.name);
-        console.log("variants", variants);
+
         setIsFetched(true);
       });
   }
@@ -70,7 +78,7 @@ function Item() {
 
   function handleAddToCart() {
     // const localCart = JSON.parse(localStorage.getItem("items") || "[]");
-    const itemToAdd = { item, drawingImg, qte };
+    const itemToAdd = { item, drawingImg, qte, selectSize };
     const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
     localStorage.setItem("cart", JSON.stringify([...localCart, itemToAdd]));
     // console.log("item", [itemToAdd]);
@@ -79,7 +87,8 @@ function Item() {
     <>
       <CustomItem filteredTeeShirt={item} drawingImg={drawingImg} />
       <div>
-        <strong>Product</strong> {name && name.substring(0, name.indexOf("("))}
+        <strong className="test">Product</strong>{" "}
+        {name && name.substring(0, name.indexOf("("))}
       </div>
       <div>
         <strong>Price</strong> {price && price}
@@ -97,6 +106,7 @@ function Item() {
       <input
         placeholder="quantity"
         type="number"
+        min="1"
         value={qte}
         onChange={handleQte}
       />

@@ -36,7 +36,7 @@ function DrawingList() {
       {drawingListArr.map((drawing) => {
         return (
           <li key={drawing._id}>
-            <Link to={`/drawings/${drawing._id}`}>
+            <Link to={`/edit/${drawing._id}`}>
               <div>{drawing.imagePath !== "" && <img src={drawing.img} />}</div>
             </Link>
             <button onClick={() => handleDelete(drawing._id)}>
