@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Nav from "../components/Nav";
 import Cart from "../components/Cart";
+import "./CartPage.css";
+
 useState;
 function CartPage() {
   const [totalItems, setTotalItems] = useState(0);

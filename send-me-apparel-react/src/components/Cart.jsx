@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CustomItem from "./CustomItem";
-import "./cart.css";
+// import "./cart.css";
 
 const Cart = ({ totalItemsCb }) => {
   const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -17,8 +17,7 @@ const Cart = ({ totalItemsCb }) => {
   function handleClear() {
     console.log("clearing");
     localStorage.clear();
-    console.log(localCart);
-    console.log(cart);
+    setCart([]);
   }
   function getTotal() {
     localCart.map(({ item, drawingImg, qte, selectSize }) => {
