@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo.svg";
 
-function Nav() {
+function Nav({ totalItems }) {
   return (
     <header>
+      <Link to="/">
+        <img src={logo}></img>
+      </Link>
+
 
 
           <Link to="/"><img src={logo}></img></Link>
 
         <div className="counter-wrapper">
-          <Link to="/cart"><span >0</span></Link>
+          <Link to="/cart"><span>{totalItems || "🛒"}</span></Link>
+            
         </div>
+
 
     </header>
   );

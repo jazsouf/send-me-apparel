@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Nav from "../components/Nav";
 import Cart from "../components/Cart";
 useState;
 function CartPage() {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("items"));
-    if (items) {
-      setItems(items);
-    }
-  }, []);
+  const [totalItems, setTotalItems] = useState(0);
+  function totalItemCb(num) {
+    setTotalItems(num);
+  }
 
   return (
     <div>
-      <Nav />
-      <Cart items={items} />
+      <Nav totalItems={totalItems} />
+      <Cart setTotalItems={totalItemCb} />
     </div>
   );
 }
