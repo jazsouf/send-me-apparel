@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
 import { useNavigate } from "react-router-dom";
+import teeShirt from "../assets/t-shirt.svg";
+import pen from "../assets/pen.svg";
+import eraser from "../assets/eraser.svg";
 
 import axios from "axios";
 
@@ -14,6 +17,8 @@ const DrawingTool = ({ id }) => {
     bgrColor: "#FEDCBA",
     toolSize: 10,
     saveWithBgr: true,
+    isPenActive: true,
+    isEraserActive: false,
   };
   const [state, setState] = useState(initialState);
   const [drawingId, setDrawingId] = useState("");
@@ -108,10 +113,12 @@ const DrawingTool = ({ id }) => {
 
   const handlePenMode = () => {
     canvas.current.eraseMode(false);
+    setState({ ...state, isPenActive: true, isEraserActive: false });
   };
 
   const handleEraserMode = () => {
     canvas.current.eraseMode(true);
+    setState({ ...state, isPenActive: false, isEraserActive: true });
   };
 
   const handleReset = () => {
@@ -134,29 +141,39 @@ const DrawingTool = ({ id }) => {
   const handleEraserSize = (e) => selectEraserSize(e.target.value);
   id && handleImportCanvas(id);
   return (
-    <div>
-      <ReactSketchCanvas
-        style={{
-          border: "0.0625rem solid #000",
-          width: "500px",
-          height: "500px",
-        }}
-        ref={canvas}
-        strokeWidth={state.toolSize}
-        eraserWidth={state.toolSize}
-        strokeColor={state.color}
-        canvasColor={state.bgrColor}
-      />
-      <fieldset>
-        <legend>Edit Your Style</legend>
-        <button onClick={handleExportDrawingData}>
-          Finish Drawing and go to select Item
-        </button>
-        <button onClick={handlePenMode}>Select Brush</button>
-        <button onClick={handleEraserMode}>Select Eraser</button>
+    <div className="drawing-tool">
+      <div className="canvas-wrapper">
+        <ReactSketchCanvas
+          className="canvas"
+          style={{
+            border: "0.0625rem dashed #000",
+            width: "500px",
+            height: "500px",
+          }}
+          ref={canvas}
+          strokeWidth={state.toolSize}
+          eraserWidth={state.toolSize}
+          strokeColor={state.color}
+          canvasColor={state.bgrColor}
+        />
+        <img className="teeshirt" src={teeShirt}></img>
+      </div>
+      <div className="buttons-nav">
         <button onClick={handleReset}>Reset</button>
         <button onClick={handleRedo}>Redo</button>
         <button onClick={handleUndo}>Undo</button>
+
+        <button onClick={handleExportDrawingData}>
+          Finish Drawing and go to select Item
+        </button>
+      </div>
+      <div className="floating-navigation">
+        <button className={state.isPenActive && `active`} onClick={handlePenMode}>
+          <img src={pen} alt="" />
+        </button>
+        <button className={state.isEraserActive && `active`} onClick={handleEraserMode}>
+          <img src={eraser} alt="" />
+        </button>
         <div>
           <label htmlFor="color">Brush Color</label>
           <input
@@ -186,8 +203,8 @@ const DrawingTool = ({ id }) => {
           />
           <label htmlFor="penSize">{state.toolSize}</label>
         </div>
-      </fieldset>
-      <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div>
+      </div>
+      {/* <div>{state.imagePath !== "" && <img src={state.imagePath} />}</div> */}
     </div>
   );
 };

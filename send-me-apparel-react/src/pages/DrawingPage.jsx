@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Drawing from "../components/Drawing";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import './DrawingPage.css'
 
 function DrawingPage() {
   const params = useParams();

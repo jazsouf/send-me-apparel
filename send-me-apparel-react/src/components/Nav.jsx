@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div>
+    <header>
       <ul>
         <li>
           <Link to="/">Send Me Apparel</Link>
@@ -12,7 +12,7 @@ function Nav() {
           <Link to="/cart">Shop Cart</Link>
         </li>
       </ul>
-    </div>
+    </header>
   );
 }
 

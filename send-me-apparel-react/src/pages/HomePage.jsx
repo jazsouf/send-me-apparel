@@ -2,18 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import Create from "../components/Create";
-import DrawingList from "../components/DrawingList";
+import DrawingListSlider from "../components/DrawingListSlider";
 import DrawingTool from "../components/DrawingTool";
+import './DrawingPage.css'
+
+
 
 function HomePage() {
   return (
     <div>
       <Nav />
+      <div className="drawing-main-wrapper">
       <DrawingTool />
-      <DrawingList style={{ display: "flex", flexWrap: "wrap", gap: "1em" }} />
-      <button>
-        <Link to="/drawings">See all drawings</Link>
-      </button>
+      <DrawingListSlider style={{ display: "flex", flexWrap: "wrap", gap: "1em" }} />
+      </div>
+      
     </div>
   );
 }
