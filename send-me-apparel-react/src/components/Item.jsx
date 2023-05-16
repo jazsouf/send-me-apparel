@@ -2,19 +2,26 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import CustomItem from "./CustomItem";
+import { Link } from "react-router-dom";
+
+import "../assets/paths";
 
 function Item() {
   const { gender, id, drawing } = useParams();
-  const [url, setUrl] = useState("");
   const [product, setProduct] = useState("");
   const [variants, setVariants] = useState("");
   const [item, setItem] = useState("");
+  const [isFetched, setIsFetched] = useState(false);
   const [drawingImg, setDrawingImg] = useState("");
   const [sizing, setSizing] = useState(["S", "M", "L", "XL", "2XL"]);
-  const [selectSize, setSelectSize] = useState("M");
+  const [selectSize, setSelectSize] = useState("");
   const [price, setPrice] = useState("");
+  const [name, setName] = useState("");
+  const [qte, setQte] = useState(1);
   const handleSelectChange = (event) => {
     setSelectSize(event.target.value);
+    item.size = event.target.value;
+    // console.log(item);
   };
   function fetchItem() {
     axios
@@ -24,7 +31,7 @@ function Item() {
           : "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
       )
       .then((response) => {
-        console.log("item data", response.data);
+        // console.log("item data", response.data);
 
         // console.log(response);
         const { product, variants } =
@@ -34,13 +41,15 @@ function Item() {
         setProduct(product);
         setVariants(variants);
         console.log(variants);
-        setPrice(item.price);
         const itemObject = variants.find(
           (variant) => variant.id === Number(id)
         );
+        // console.log("itemObj", itemObject);
         setItem(itemObject);
-
-        // console.log(itemObject);
+        setPrice(item.price);
+        setName(item.name);
+        console.log("variants", variants);
+        setIsFetched(true);
       });
   }
   function fetchDrawing() {
@@ -50,25 +59,53 @@ function Item() {
       .catch((error) => console.log(error));
   }
 
+  function handleQte(e) {
+    setQte(e.target.value);
+  }
+
   useEffect(() => {
     fetchItem();
     fetchDrawing();
-  }, []);
+  }, [isFetched]);
 
+  function handleAddToCart() {
+    // const localCart = JSON.parse(localStorage.getItem("items") || "[]");
+    const itemToAdd = { item, drawingImg, qte };
+    const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    localStorage.setItem("cart", JSON.stringify([...localCart, itemToAdd]));
+    // console.log("item", [itemToAdd]);
+  }
   return (
     <>
       <CustomItem filteredTeeShirt={item} drawingImg={drawingImg} />
       <div>
-        <span>Price:</span> {price} <span>$</span>
+        <strong>Product</strong> {name && name.substring(0, name.indexOf("("))}
+      </div>
+      <div>
+        <strong>Price</strong> {price && price}
+        <span>$</span>
       </div>
       <select value={selectSize} onChange={handleSelectChange}>
-        <option value="">Select a Size</option>
+        <option value="">Select Size</option>
         {sizing.map((size) => (
           <option key={size} value={size}>
             {size}
           </option>
         ))}
       </select>
+      <label htmlFor="qte">Quantity</label>
+      <input
+        placeholder="quantity"
+        type="number"
+        value={qte}
+        onChange={handleQte}
+      />
+      <button onClick={handleAddToCart}>
+        <Link to="/cart">Add to cart</Link>
+      </button>
+      <button>
+        <Link to={`/items/${drawing}`}>Back to item selection</Link>
+      </button>
     </>
   );
 }

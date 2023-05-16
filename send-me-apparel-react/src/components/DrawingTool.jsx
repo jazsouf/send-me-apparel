@@ -11,7 +11,7 @@ const DrawingTool = ({ id }) => {
     blob: "",
     svg: null,
     color: "#123456",
-    bgrColor: "#FEDCBA",
+    bgrColor: "#FFFFFF",
     toolSize: 10,
     saveWithBgr: true,
   };
@@ -181,7 +181,7 @@ const DrawingTool = ({ id }) => {
             id="penSize"
             min="0"
             max="42"
-            value={state.penSize}
+            value={state.toolSize}
             onChange={handleToolSize}
           />
           <label htmlFor="penSize">{state.toolSize}</label>
