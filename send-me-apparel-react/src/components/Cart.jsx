@@ -5,13 +5,25 @@ import CustomItem from "./CustomItem";
 const Cart = () => {
   const localCart = JSON.parse(localStorage.getItem("cart") || "[]");
   const [cart, setCart] = useState(localCart);
+  let total = 0;
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart")));
-  }, [localStorage]);
+  }, [localStorage.cart]);
   function handleClear() {
     console.log("clearing");
     setCart([]);
     window.localStorage.clear();
+  }
+  function getTotal() {
+    localCart.map(({ item, drawingImg, qte, selectSize }) => {
+      total += Math.round(Number(qte) * Number(item.price) * 100) / 100;
+    });
+    return total;
+  }
+  function handleRemoveItem(i) {
+    const filteredCart = cart.filter((item) => cart.indexOf(item) !== i);
+    setCart(filteredCart);
+    localStorage.setItem("cart", JSON.stringify(filteredCart));
   }
   return (
     <>
@@ -19,31 +31,38 @@ const Cart = () => {
         <thead>
           <tr>
             <th>Product</th>
+            <th>Size</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>Total</th>
             <th>Remove item</th>
           </tr>
         </thead>
-        {console.log("rendered Local cart", localCart)}
-        <tbody>
+        <tbody className="cartBody">
           {localCart.length > 0 &&
-            localCart.map(({ item, drawingImg, qte }) => {
+            localCart.map(({ item, drawingImg, qte, selectSize }, i) => {
               return (
-                <tr key={crypto.randomUUID()}>
+                <tr key={i}>
                   <td>
                     <CustomItem
                       filteredTeeShirt={item}
                       drawingImg={drawingImg}
                     />
                   </td>
+                  <td>{selectSize}</td>
                   <td>{qte}</td>
                   <td>{item.price}</td>
                   <td>
                     {Math.round(Number(qte) * Number(item.price) * 100) / 100}
                   </td>
                   <td>
-                    <button onClick={handleRemoveItem}>Remove</button>
+                    <button
+                      onClick={() => {
+                        handleRemoveItem(i);
+                      }}
+                    >
+                      Remove
+                    </button>
                   </td>
                 </tr>
               );
@@ -54,6 +73,9 @@ const Cart = () => {
       <button>
         <Link to="/">Another One</Link>
       </button>
+      <div>
+        <strong>Total {getTotal()}</strong>{" "}
+      </div>
     </>
   );
 };
