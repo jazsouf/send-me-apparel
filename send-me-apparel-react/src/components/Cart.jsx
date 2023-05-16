@@ -17,8 +17,7 @@ const Cart = ({ totalItemsCb }) => {
   function handleClear() {
     console.log("clearing");
     localStorage.clear();
-    console.log(localCart);
-    console.log(cart);
+    setCart([]);
   }
   function getTotal() {
     localCart.map(({ item, drawingImg, qte, selectSize }) => {
