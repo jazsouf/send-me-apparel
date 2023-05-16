@@ -99,68 +99,82 @@ function ItemsList() {
         alignItems: "center",
       }}
     >
-      <div></div>
-      <button
-        onClick={() =>
-          displayItems(
-            "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
-          )
-        }
-      >
-        Women
-      </button>
-      <button
-        onClick={() =>
-          displayItems(
-            "https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05"
-          )
-        }
-      >
-        Men
-      </button>
+      <div className="item-wrapper">
+        <div className="item-img">
+          <CustomItem
+            filteredTeeShirt={filteredTeeShirt}
+            drawingImg={drawingImg}
+            default={selectAShirt}
+          />
+          <button>
+            <Link to={`/edit/${params.drawing}`}>Edit Drawing</Link>
+          </button>
+        </div>
+        <div className="item-selector">
+          <div className="gender">
+            <h1>Gender Selection</h1>
+            <div className="separator"></div>
+            <div class="gender-wrapper">
+              <button
+                onClick={() =>
+                  displayItems(
+                    "https://ironrest.fly.dev/api/send-me-apparel-items/645e032855e69e1b019f7f06"
+                  )
+                }
+              >
+                Women
+              </button>
+              <button
+                onClick={() =>
+                  displayItems(
+                    "https://ironrest.fly.dev/api/send-me-apparel-items/645e02be55e69e1b019f7f05"
+                  )
+                }
+              >
+                Men
+              </button>
+            </div>
+          </div>
+          <div className="colors-wrapper">
+            <h1>Colors</h1>
+            <div className="separator"></div>
 
-      <div style={{ display: "flex" }}>
-        {colors.map((color, index) => (
-          // console.log(color)
-          <button
-            key={color}
-            onClick={() => handleColorButtonClick(color)}
-            style={{
-              backgroundColor: color_code[index], // Use the color as the background color
-              width: "50px",
-              height: "50px",
-              margin: "5px",
-              border: "1px solid black",
-            }}
-          ></button>
-        ))}
+            {colors.map((color, index) => (
+              // console.log(color)
+              <button
+                key={color}
+                onClick={() => handleColorButtonClick(color)}
+                style={{
+                  backgroundColor: color_code[index], // Use the color as the background color
+                  width: "50px",
+                  height: "50px",
+                  margin: "5px",
+                  border: "1px solid black",
+                }}
+              ></button>
+            ))}
+          </div>
+
+          {/* {product.description} */}
+
+          {filteredTeeShirt && (
+            <button>
+              <Link
+                to={
+                  "/item/" +
+                  gender +
+                  "/" +
+                  filteredTeeShirt.id +
+                  "/" +
+                  params.drawing
+                }
+              >
+                Validate Item
+              </Link>
+            </button>
+          )}
+        </div>
       </div>
-
-      <CustomItem
-        filteredTeeShirt={filteredTeeShirt}
-        drawingImg={drawingImg}
-        default={selectAShirt}
-      />
-      <button>
-        <Link to={`/edit/${params.drawing}`}>Edit Drawing</Link>
-      </button>
-      {product.description}
-      {filteredTeeShirt && (
-        <button>
-          <Link
-            to={
-              "/item/" +
-              gender +
-              "/" +
-              filteredTeeShirt.id +
-              "/" +
-              params.drawing
-            }
-          >
-            Validate Item
-          </Link>
-        </button>
-      )}
     </div>
   );
 }

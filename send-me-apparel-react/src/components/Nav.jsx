@@ -1,17 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg"
 
 function Nav() {
   return (
     <header>
-      <ul>
-        <li>
-          <Link to="/">Send Me Apparel</Link>
-        </li>
-        <li>
-          <Link to="/cart">Shop Cart</Link>
-        </li>
-      </ul>
+
+
+          <Link to="/"><img src={logo}></img></Link>
+
+        <div class="counter-wrapper">
+          <Link to="/cart"><span >0</span></Link>
+        </div>
+
     </header>
   );
 }
