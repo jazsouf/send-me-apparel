@@ -8,7 +8,7 @@ function NotFound() {
       <div
         style={{
           position: "absolute",
-          marginTop: "30%",
+          marginTop: "25%",
           width: "100%",
           fontSize: "2.5rem",
         }}

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import teeShirt from "../assets/t-shirt.svg";
 import pen from "../assets/pen.svg";
 import eraser from "../assets/eraser.svg";
@@ -163,7 +163,9 @@ const DrawingTool = ({ id }) => {
       </div>
 
       <div className="buttons-nav validate">
-        <button onClick={handleReset}>Reset</button>
+        <Link to="/">
+          <button onClick={handleReset}>Reset</button>
+        </Link>
         <button onClick={handleExportDrawingData}>Done !</button>
       </div>
       <div className="navWrapper">

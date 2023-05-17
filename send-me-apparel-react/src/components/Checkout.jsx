@@ -4,7 +4,7 @@ const Checkout = () => {
   return (
     <div>
       <iframe
-        style={{ marginTop: "15%" }}
+        style={{ marginTop: "15vh" }}
         width="80%"
         height="500"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&controls=0&showinfo=0&autoplay=1&loop=1"
