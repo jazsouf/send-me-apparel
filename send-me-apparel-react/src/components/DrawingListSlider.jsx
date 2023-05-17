@@ -32,17 +32,19 @@ function DrawingList() {
   return (
     init && (
       <div className="drawing-slider">
-        {drawingListArr.map((drawing, index) => {
-          return (
-            <div className={`image-container`} key={drawing._id}>
-              <Link to={`/edit/${drawing._id}`}>
-                <div>
-                  {drawing.imagePath !== "" && <img src={drawing.img} />}
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+        <div className="drawing-wrap">
+          {drawingListArr.map((drawing, index) => {
+            return (
+              <div className={`image-container`} key={drawing._id}>
+                <Link to={`/edit/${drawing._id}`}>
+                  <div>
+                    {drawing.imagePath !== "" && <img src={drawing.img} />}
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
         <div className="button-wrapper">
           <Link to="/drawings">
             <button>See all drawings</button>

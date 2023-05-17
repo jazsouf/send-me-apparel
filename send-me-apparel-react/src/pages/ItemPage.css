@@ -79,3 +79,28 @@
   border-radius: 1.5rem;
   background-color: black;
 }
+
+
+@media (max-width: 1000px) {
+  .item-wrapper {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .customWrapper {
+    width: 100vw;
+  }
+
+  .customWrapper img:nth-child(2) {
+    width: 100%;
+  }
+
+  .cart-el {
+    width: 100%;
+  }
+
+  .cart-el .customWrapper {
+    width: 100%;
+  }
+
+}
